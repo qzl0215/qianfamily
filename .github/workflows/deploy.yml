@@ -1,0 +1,65 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: qianfamily-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      DEPLOY_SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
+      DEPLOY_SSH_USER: ${{ secrets.DEPLOY_SSH_USER }}
+      DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+      DEPLOY_REMOTE_BASE: ${{ secrets.DEPLOY_REMOTE_BASE }}
+      DEPLOY_REMOTE_PORT: ${{ secrets.DEPLOY_REMOTE_PORT }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Configure SSH
+        run: |
+          DEPLOY_REMOTE_PORT="${DEPLOY_REMOTE_PORT:-22}"
+          test -n "$DEPLOY_SSH_HOST"
+          test -n "$DEPLOY_SSH_USER"
+          test -n "$DEPLOY_SSH_PRIVATE_KEY"
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "$DEPLOY_REMOTE_PORT" -H "$DEPLOY_SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Sync static files to server
+        run: |
+          DEPLOY_REMOTE_BASE="${DEPLOY_REMOTE_BASE:-/usr/share/nginx/html/qianfamily.online}"
+          DEPLOY_REMOTE_PORT="${DEPLOY_REMOTE_PORT:-22}"
+          ssh -p "$DEPLOY_REMOTE_PORT" "${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}" \
+            "mkdir -p '${DEPLOY_REMOTE_BASE}/out'"
+          rsync -az --delete \
+            -e "ssh -p ${DEPLOY_REMOTE_PORT}" \
+            ./out/ "${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}:${DEPLOY_REMOTE_BASE}/out/"
+
+      - name: Health check
+        run: |
+          curl -fsSI --connect-timeout 15 https://qianfamily.online | head -n 1
+          curl -fsSI --connect-timeout 15 https://www.qianfamily.online | head -n 1

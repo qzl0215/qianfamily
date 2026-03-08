@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f6f1e8;
+  --panel: #fbf8f2;
+  --ink: #1f1a17;
+  --muted: #6b6258;
+  --line: #d7ccbe;
+  --accent: #6f5141;
+  --accent-soft: #e8ddd1;
+  --shadow-card: 0 20px 50px rgba(82, 65, 50, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(232, 221, 209, 0.7), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(111, 81, 65, 0.12), transparent 18%),
+    linear-gradient(180deg, #fbf7ef 0%, #f6f1e8 55%, #f2ece2 100%);
+  background-image:
+    radial-gradient(circle at top left, rgba(232, 221, 209, 0.7), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(111, 81, 65, 0.12), transparent 18%),
+    linear-gradient(180deg, #fbf7ef 0%, #f6f1e8 55%, #f2ece2 100%),
+    url("/textures/paper-noise.svg");
+  background-size: auto, auto, auto, 180px 180px;
+  background-attachment: scroll, scroll, scroll, fixed;
+  font-family:
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(111, 81, 65, 0.18);
+}
+
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  a {
+    @apply transition-[color,background-color,border-color,transform,box-shadow] duration-150 ease-out;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC",
+      "Times New Roman", serif;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .font-serif-cn {
+    font-family:
+      "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC",
+      "Times New Roman", serif;
+  }
+
+  .page-section {
+    @apply py-10 sm:py-12 lg:py-14;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.32em] text-muted;
+  }
+
+  .section-title {
+    @apply font-serif-cn text-[2rem] leading-tight text-ink sm:text-[2.7rem];
+  }
+
+  .section-copy {
+    @apply max-w-3xl text-[1rem] leading-8 text-muted;
+  }
+
+  .surface-card {
+    @apply rounded-[2rem] border border-line/80 p-6 shadow-card sm:p-8 lg:p-10;
+    background-color: rgba(251, 248, 242, 0.92);
+  }
+
+  .surface-card-hero {
+    @apply bg-[linear-gradient(145deg,rgba(251,248,242,0.96),rgba(232,221,209,0.68))];
+  }
+
+  .soft-panel {
+    @apply rounded-[2rem] border border-line/80 p-6 shadow-card sm:p-8 lg:p-10;
+    background-color: rgba(251, 248, 242, 0.85);
+  }
+
+  .subtle-card {
+    @apply rounded-[1.75rem] border border-line/75 bg-white/45 p-6 shadow-sm backdrop-blur-sm;
+  }
+
+  .button-base {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold tracking-[0.08em] no-underline shadow-sm transition duration-150 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .button-primary {
+    @apply border-accent bg-accent text-[#FBF8F2] hover:bg-[#614739];
+  }
+
+  .button-secondary {
+    @apply border-line bg-panel/75 text-ink hover:border-accent/40 hover:bg-white/70;
+  }
+
+  .status-chip {
+    @apply inline-flex items-center rounded-full border border-accent/15 bg-accent-soft px-3 py-1 text-xs font-medium tracking-[0.12em] text-accent;
+  }
+}
