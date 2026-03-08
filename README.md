@@ -101,6 +101,13 @@ npm run build
 rsync -az --delete ./out/ root@43.160.239.62:/usr/share/nginx/html/qianfamily.online/out/
 ```
 
+线上域名策略：
+
+```text
+https://qianfamily.online      主站内容域名
+https://www.qianfamily.online  301 跳转到主站
+```
+
 ## GitHub 自动部署
 
 仓库已包含 `main` 分支自动部署工作流：
@@ -131,7 +138,8 @@ DEPLOY_REMOTE_PORT=22
 1. `npm ci`
 2. `npm run build`
 3. `rsync out/` 到服务器
-4. 对 `https://qianfamily.online` 做健康检查
+4. 同步 Nginx 配置并 reload
+5. 对 `https://qianfamily.online` 和 `https://www.qianfamily.online` 做健康检查
 
 ## 当前范围
 

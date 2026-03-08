@@ -59,7 +59,15 @@ jobs:
             -e "ssh -p ${DEPLOY_REMOTE_PORT}" \
             ./out/ "${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}:${DEPLOY_REMOTE_BASE}/out/"
 
+      - name: Sync nginx config and reload
+        run: |
+          DEPLOY_REMOTE_PORT="${DEPLOY_REMOTE_PORT:-22}"
+          scp -P "$DEPLOY_REMOTE_PORT" deploy/nginx.qianfamily.online.conf \
+            "${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}:/etc/nginx/conf.d/qianfamily.online.conf"
+          ssh -p "$DEPLOY_REMOTE_PORT" "${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}" \
+            "nginx -t && systemctl reload nginx"
+
       - name: Health check
         run: |
           curl -fsSI --connect-timeout 15 https://qianfamily.online | head -n 1
-          curl -fsSI --connect-timeout 15 https://www.qianfamily.online | head -n 1
+          curl -fsSI --connect-timeout 15 -L https://www.qianfamily.online | head -n 1
