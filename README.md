@@ -1,6 +1,6 @@
 # qian-family-site
 
-钱氏文化入口站第一版。当前目标不是做家谱工具，而是先用一个稳定、克制、可预览的静态中文网站，建立“家训、历史、人物”这条叙事主线。
+钱氏宗亲门户第一版。当前版本先把“文化认同 -> 谱系归属 -> 宗亲连接 -> 参与行动 -> 内容回流”这条总站逻辑搭稳，再逐步接入登录、提交、报名与订单能力。
 
 ## 技术栈
 
@@ -37,22 +37,29 @@ out/
 ## 当前目录结构
 
 ```text
-.
+. 
 ├── app/
+│   ├── events/
+│   ├── genealogy/
+│   ├── gifts/
+│   ├── heritage/
 │   ├── globals.css
 │   ├── layout.tsx
 │   ├── page.tsx
 │   └── topics/[slug]/page.tsx
 ├── components/
-│   ├── sections/
+│   ├── portal/
+│   ├── topics/
 │   └── ui/
 ├── deploy/
 │   └── nginx.qianfamily.online.conf
 ├── lib/
+│   ├── portal-content.ts
 │   ├── site-meta.ts
 │   └── topic-routes.ts
 ├── public/
-│   └── textures/paper-noise.svg
+│   ├── textures/paper-noise.svg
+│   └── topics/
 ├── next.config.ts
 ├── package.json
 ├── postcss.config.mjs
@@ -143,6 +150,10 @@ DEPLOY_REMOTE_PORT=22
 
 ## 当前范围
 
-- 已实现：首页 `/`
-- 已实现：未来专题统一占位页 `/topics/[slug]/`
-- 未实现：登录、数据库、后台、家谱树、评论、检索
+- 已实现：门户首页 `/`
+- 已实现：家谱中心 `/genealogy/` 及其说明页
+- 已实现：文化传承 `/heritage/`，并包含家风家训、吴越历史、近代人物、族人故事
+- 已实现：祭祖活动 `/events/` 频道骨架与静态详情页
+- 已实现：宣传礼品 `/gifts/` 频道骨架与静态详情页
+- 保留兼容：旧专题路径 `/topics/[slug]/`
+- 未实现：登录、数据库、后台审核、真实提交表单、真实订单支付

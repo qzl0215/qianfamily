@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F6F1E8"/>
+  <rect x="34" y="34" width="1132" height="732" rx="38" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="946" cy="230" r="150" fill="#E8DDD1" fill-opacity="0.58"/>
+  <text x="118" y="166" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="10">上海传承</text>
+  <text x="116" y="318" fill="#1F1A17" font-size="96" font-family="STSong, Songti SC, serif">非遗与地方保护</text>
+  <text x="118" y="404" fill="#6F5141" font-size="50" font-family="STSong, Songti SC, serif">2021 • 上海市 • 地方史志学会</text>
+  <text x="120" y="516" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">把钱氏家训从族内文本推进成具有明确地方抓手的公共文化遗产。</text>
+  <path d="M118 612H1038" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="120" y="682" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">传承图板：国家级非遗扩展项目与上海地方文化语境</text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="80" x2="1112" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#ECE1D4"/>
+    </linearGradient>
+  </defs>
+</svg>

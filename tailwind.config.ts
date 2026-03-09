@@ -11,10 +11,13 @@ const config: Config = {
       colors: {
         paper: "#F6F1E8",
         panel: "#FBF8F2",
+        "panel-deep": "#F1E8DD",
         ink: "#1F1A17",
+        "ink-soft": "#3D342D",
         muted: "#6B6258",
         line: "#D7CCBE",
         accent: "#6F5141",
+        "accent-deep": "#5D4335",
         "accent-soft": "#E8DDD1",
       },
       maxWidth: {

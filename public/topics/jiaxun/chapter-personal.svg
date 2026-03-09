@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F7F1E7"/>
+  <rect x="36" y="36" width="1128" height="728" rx="36" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="988" cy="210" r="132" fill="#E8DDD1" fill-opacity="0.55"/>
+  <path d="M170 630H1030" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="140" y="170" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="12">个人篇</text>
+  <text x="138" y="315" fill="#1F1A17" font-size="108" font-family="STSong, Songti SC, serif">修身</text>
+  <text x="138" y="410" fill="#6F5141" font-size="52" font-family="STSong, Songti SC, serif">自省 • 言行 • 读书</text>
+  <text x="140" y="520" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">先正心术，再端言行，把做人的根基立稳。</text>
+  <text x="142" y="688" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">钱氏家训导读图板</text>
+  <defs>
+    <linearGradient id="bg" x1="76" y1="92" x2="1108" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#EEE3D6"/>
+    </linearGradient>
+  </defs>
+</svg>

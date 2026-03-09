@@ -1,41 +1,99 @@
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
+import { mainNavItems } from "@/lib/portal-content";
 import { siteMeta } from "@/lib/site-meta";
+
+const genealogyLinks = [
+  { href: "/genealogy/find-roots/", label: "寻根" },
+  { href: "/genealogy/continue/", label: "家谱续谱" },
+  { href: "/genealogy/takeover/", label: "我接家谱" },
+  { href: "/genealogy/status/", label: "我的提交 / 进度" },
+];
+
+const heritageLinks = [
+  { href: "/heritage/jiafeng-jiaxun/", label: "家风家训" },
+  { href: "/heritage/wuyue/", label: "钱王与吴越" },
+  { href: "/heritage/figures/", label: "近代人物" },
+  { href: "/heritage/stories/", label: "族人故事" },
+];
+
+const connectionLinks = [
+  { href: "/events/upcoming/", label: "近期活动" },
+  { href: "/events/calendar/", label: "年度活动表" },
+  { href: "/gifts/catalog/", label: "礼品总览" },
+  { href: "/gifts/occasions/", label: "场景与用途" },
+];
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pb-12 pt-20 sm:pt-24">
+    <footer className="pb-10 pt-10 sm:pt-14">
       <Container>
-        <div className="surface-card grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)]">
-          <div className="space-y-4">
-            <p className="eyebrow">第一版说明</p>
-            <h2 className="font-serif-cn text-[1.85rem] leading-tight text-ink sm:text-[2.3rem]">
-              先把精神线讲清，再谈后续连接与入谱。
-            </h2>
-            <p className="max-w-2xl text-[0.98rem] leading-8 text-muted">
-              当前版本聚焦钱氏家训、吴越历史与近代人物三条线索。家谱功能会在后续阶段开放，不在这一版首页范围内。
-            </p>
+        <div className="rounded-[1.9rem] border border-line/70 bg-white/35 p-5 shadow-[0_12px_24px_rgba(82,65,50,0.04)] sm:p-6">
+          <div className="grid gap-8 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+            <div className="space-y-4">
+              <p className="ornament-line">钱氏宗亲门户</p>
+              <p className="font-serif-cn text-[1.35rem] leading-tight text-ink sm:text-[1.55rem]">
+                先文化认同，再谱系归属，再走向宗亲连接与参与行动。
+              </p>
+              <p className="max-w-2xl text-sm leading-7 text-muted">
+                这个站点把家训、历史、人物作为信任基础，把寻根、续谱、活动与礼品作为现实入口，最终让内容继续回流为公共记忆。
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
+                {mainNavItems.map((item) => (
+                  <Link key={item.href} href={item.href} className="text-accent">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-3">
+              <div className="space-y-3 text-sm leading-7 text-muted">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                  家谱中心
+                </p>
+                {genealogyLinks.map((item) => (
+                  <div key={item.href}>
+                    <Link href={item.href} className="text-accent">
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-3 text-sm leading-7 text-muted">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                  文化传承
+                </p>
+                {heritageLinks.map((item) => (
+                  <div key={item.href}>
+                    <Link href={item.href} className="text-accent">
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-3 text-sm leading-7 text-muted">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                  活动与礼品
+                </p>
+                {connectionLinks.map((item) => (
+                  <div key={item.href}>
+                    <Link href={item.href} className="text-accent">
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="space-y-4 text-sm leading-7 text-muted">
-            <p>
-              入口预留：
-              <Link href="/topics/jiaxun/" className="ml-2 text-accent">
-                钱氏家训
-              </Link>
-              <Link href="/topics/wuyue/" className="ml-4 text-accent">
-                钱王与吴越
-              </Link>
-              <Link href="/topics/figures/" className="ml-4 text-accent">
-                近代人物
-              </Link>
-            </p>
-            <p>{siteMeta.description}</p>
-            <p>
-              © {year} {siteMeta.name}
-            </p>
+
+          <div className="mt-8 rounded-[1.5rem] border border-line/70 bg-white/[0.32] px-5 py-4 text-sm leading-7 text-muted">
+            © {year} {siteMeta.name}。当前版本以静态展示方式先把宗亲门户的信息架构、入口逻辑与文化主线搭稳，后续再接入登录、提交、报名与订单能力。
           </div>
         </div>
       </Container>

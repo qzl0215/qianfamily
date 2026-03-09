@@ -2,4 +2,6 @@
 node_modules
 .next
 out
+output
+.next_dev_bak_*
 *.tsbuildinfo

@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F7F1E7"/>
+  <rect x="36" y="36" width="1128" height="728" rx="36" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="944" cy="214" r="144" fill="#E8DDD1" fill-opacity="0.52"/>
+  <path d="M166 622H1036" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="140" y="170" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="12">家庭篇</text>
+  <text x="138" y="315" fill="#1F1A17" font-size="108" font-family="STSong, Songti SC, serif">齐家</text>
+  <text x="138" y="410" fill="#6F5141" font-size="52" font-family="STSong, Songti SC, serif">孝悌 • 和睦 • 治家</text>
+  <text x="140" y="520" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">家庭是家风真正发生作用的地方，也是教养的起点。</text>
+  <text x="142" y="688" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">钱氏家训导读图板</text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="80" x2="1100" y2="712" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#EDE0D2"/>
+    </linearGradient>
+  </defs>
+</svg>

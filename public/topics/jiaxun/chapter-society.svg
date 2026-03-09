@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F7F1E7"/>
+  <rect x="36" y="36" width="1128" height="728" rx="36" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="950" cy="216" r="136" fill="#E8DDD1" fill-opacity="0.5"/>
+  <path d="M168 624H1032" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="140" y="170" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="12">社会篇</text>
+  <text x="138" y="315" fill="#1F1A17" font-size="108" font-family="STSong, Songti SC, serif">济世</text>
+  <text x="138" y="410" fill="#6F5141" font-size="52" font-family="STSong, Songti SC, serif">周急 • 解纷 • 公益</text>
+  <text x="140" y="520" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">家训不能只顾小家，也要把善意推向邻里与社会。</text>
+  <text x="142" y="688" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">钱氏家训导读图板</text>
+  <defs>
+    <linearGradient id="bg" x1="70" y1="84" x2="1106" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#ECE0D3"/>
+    </linearGradient>
+  </defs>
+</svg>

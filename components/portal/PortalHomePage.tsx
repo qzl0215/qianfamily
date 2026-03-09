@@ -1,0 +1,401 @@
+import Link from "next/link";
+
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Container } from "@/components/ui/Container";
+import {
+  accessRoles,
+  announcementCards,
+  cultureHighlightCards,
+  genealogyCenterCards,
+  giftHighlightCards,
+  genealogyFacts,
+  homeNarrativeCards,
+  homePrimaryActions,
+  portalLogicSteps,
+  upcomingEventCards,
+} from "@/lib/portal-content";
+
+export function PortalHomePage() {
+  return (
+    <>
+      <section className="page-section pb-10 pt-10 sm:pt-14 lg:pt-16" id="portal-home">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(360px,0.98fr)] lg:items-stretch">
+            <div className="surface-card surface-card-hero">
+              <div className="max-w-4xl space-y-7">
+                <span className="hero-kicker">钱氏宗亲门户首页</span>
+                <div className="space-y-5">
+                  <p className="ornament-line">公开浏览，登录办事</p>
+                  <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
+                    先寻根续谱，再连接宗亲、文化与行动
+                  </h1>
+                </div>
+                <p className="hero-deck">
+                  这不是单纯的文化站，也不是只做工具的办事页，而是钱氏族人的宗亲门户。
+                </p>
+                <p className="hero-summary">
+                  网站的总逻辑固定为“文化认同、谱系归属、宗亲连接、参与行动、内容回流”。首页优先给出寻根、续谱、活动报名和礼品选购四个动作入口，同时保留家训、吴越与人物内容作为信任基础。
+                </p>
+
+                <div className="editorial-band grid gap-0 sm:grid-cols-5">
+                  {portalLogicSteps.map((step, index) => (
+                    <div key={step} className="editorial-band-item">
+                      <p className="editorial-number">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-ink">{step}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <ButtonLink href="/genealogy/find-roots/">先去寻根</ButtonLink>
+                  <ButtonLink href="/genealogy/" variant="secondary">
+                    进入家谱中心
+                  </ButtonLink>
+                  <ButtonLink href="/events/" variant="secondary">
+                    查看祭祖活动
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>
+
+            <aside className="surface-card hero-side-panel">
+              <div className="space-y-5">
+                <p className="ornament-line">四个主动作</p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {homePrimaryActions.map((action) => (
+                    <Link
+                      key={action.title}
+                      href={action.href}
+                      className="group rounded-[1.55rem] border border-line/75 bg-white/[0.42] p-5 shadow-[0_12px_22px_rgba(82,65,50,0.04)]"
+                    >
+                      {action.status ? (
+                        <span className="status-chip">{action.status}</span>
+                      ) : null}
+                      <h2 className="mt-4 font-serif-cn text-[1.65rem] leading-tight text-ink">
+                        {action.title}
+                      </h2>
+                      <p className="mt-3 text-sm leading-7 text-muted">
+                        {action.summary}
+                      </p>
+                      <p className="mt-4 text-xs leading-6 text-accent">
+                        {action.note}
+                      </p>
+                      <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 group-hover:underline">
+                        进入入口
+                        <span aria-hidden="true">↗</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                    门户判断
+                  </p>
+                  <p className="mt-3 font-serif-cn text-[1.28rem] leading-8 text-ink">
+                    先把族人的办事入口立住，再让文化内容成为稳定的信任底板。
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    你可以把首页理解为一个公开可浏览、登录后可办理宗亲事务的门户，而不是一个只会讲故事或只会堆功能的页面。
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="family-narrative">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] lg:items-start">
+              <div className="space-y-5">
+                <p className="ornament-line">家族主叙事</p>
+                <h2 className="section-title">文化内容后移，但不能消失</h2>
+                <p className="section-copy">
+                  家谱是连接，活动是组织，礼品是参与，但真正让这个站有身份感的仍然是家训、吴越与人物三条文化主线。它们构成门户的信任基础。
+                </p>
+                <div className="lead-quote">
+                  <p className="font-serif-cn text-[1.38rem] leading-9 text-ink">
+                    钱氏网站不是“先做工具，文化以后再说”，而是“先有精神认同，再进入办事与连接”。
+                  </p>
+                </div>
+                <ButtonLink href="/heritage/" variant="secondary">
+                  进入文化传承
+                </ButtonLink>
+              </div>
+
+              <div className="grid gap-5 lg:grid-cols-3">
+                {homeNarrativeCards.map((card) => (
+                  <article key={card.title} className="subtle-card">
+                    <p className="eyebrow">{card.eyebrow}</p>
+                    <h3 className="mt-4 font-serif-cn text-[1.48rem] leading-tight text-ink">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                    <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                      {card.summary}
+                    </p>
+                    <Link
+                      href={card.href}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                    >
+                      {card.actionLabel}
+                      <span aria-hidden="true">↗</span>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="genealogy-center">
+        <Container>
+          <div className="soft-panel">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)]">
+              <div className="space-y-5">
+                <p className="ornament-line">家谱中心</p>
+                <h2 className="section-title">把寻根、续谱、接谱收回一个入口中心</h2>
+                <p className="section-copy">
+                  顶层只保留一个“家谱中心”，不让“寻根、续谱、接谱”三个动作在导航层面彼此抢位。公开先讲用途与流程，登录后再真正办事。
+                </p>
+                <div className="space-y-4">
+                  {genealogyFacts.map((fact) => (
+                    <div
+                      key={fact.label}
+                      className="rounded-[1.45rem] border border-line/70 bg-white/[0.34] p-4"
+                    >
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                        {fact.label}
+                      </p>
+                      <p className="mt-2 font-serif-cn text-[1.22rem] leading-8 text-ink">
+                        {fact.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                {genealogyCenterCards.map((card) => (
+                  <article key={card.title} className="subtle-card">
+                    <p className="eyebrow">{card.eyebrow}</p>
+                    <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                    <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                      {card.summary}
+                    </p>
+                    <Link
+                      href={card.href}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                    >
+                      {card.actionLabel}
+                      <span aria-hidden="true">↗</span>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="events-preview">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="space-y-4">
+              <p className="ornament-line">祭祖活动</p>
+              <h2 className="section-title">从公开活动页进入现实中的宗亲连接</h2>
+              <p className="section-copy">
+                活动频道不只是发布一条新闻，而是承载时间、地点、流程、报名、签到和回顾的完整入口。公开页先把活动讲清楚，登录后完成报名与消息接收。
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {upcomingEventCards.map((card) => (
+                <article key={card.title} className="surface-card">
+                  <p className="eyebrow">{card.eyebrow}</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.55rem] leading-tight text-ink">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                  <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                    {card.summary}
+                  </p>
+                  {card.tags ? (
+                    <div className="mt-5 flex flex-wrap gap-2 text-sm text-accent">
+                      {card.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-accent/10 bg-white/50 px-3 py-1.5"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                  <Link
+                    href={card.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {card.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="culture-preview">
+        <Container>
+          <div className="soft-panel">
+            <div className="space-y-4">
+              <p className="ornament-line">文化传承</p>
+              <h2 className="section-title">把家风家训、吴越历史、人物与故事收回一个频道</h2>
+              <p className="section-copy">
+                文化传承是一个总频道，而不是多个平行顶层入口。首页只展示精选内容，正式阅读统一进入频道内部完成。
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {cultureHighlightCards.map((card) => (
+                <article key={card.title} className="subtle-card">
+                  <p className="eyebrow">{card.eyebrow}</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.4rem] leading-tight text-ink">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                  <p className="mt-4 text-[0.96rem] leading-8 text-muted">
+                    {card.summary}
+                  </p>
+                  <Link
+                    href={card.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {card.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="gifts-preview">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="space-y-4">
+              <p className="ornament-line">宣传礼品</p>
+              <h2 className="section-title">礼品频道按文化意义与使用场景组织，而不是先堆商品</h2>
+              <p className="section-copy">
+                这里承接门户中的“参与行动”层。礼品既是纪念物，也是文化传播工具，所以页面要先讲用途和场景，再讲下单与订单。
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {giftHighlightCards.map((card) => (
+                <article key={card.title} className="subtle-card">
+                  <p className="eyebrow">{card.eyebrow}</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                  <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                    {card.summary}
+                  </p>
+                  {card.tags ? (
+                    <div className="mt-5 flex flex-wrap gap-2 text-sm text-accent">
+                      {card.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-accent/10 bg-white/50 px-3 py-1.5"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                  <Link
+                    href={card.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {card.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="announcements">
+        <Container>
+          <div className="surface-card">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+              <div className="space-y-5">
+                <p className="ornament-line">宗亲动态 / 公告</p>
+                <h2 className="section-title">让活动、寻根和礼品成果持续回流为站内内容</h2>
+                <div className="space-y-4">
+                  {announcementCards.map((card) => (
+                    <article
+                      key={card.title}
+                      className="rounded-[1.5rem] border border-line/70 bg-white/[0.36] p-5"
+                    >
+                      <p className="eyebrow">{card.eyebrow}</p>
+                      <h3 className="mt-4 font-serif-cn text-[1.4rem] leading-tight text-ink">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                      <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                        {card.summary}
+                      </p>
+                      <Link
+                        href={card.href}
+                        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                      >
+                        {card.actionLabel}
+                        <span aria-hidden="true">↗</span>
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </div>
+
+              <aside className="rounded-[1.8rem] border border-line/70 bg-white/[0.35] p-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                  角色与权限
+                </p>
+                <div className="mt-5 space-y-4">
+                  {accessRoles.map((role) => (
+                    <div
+                      key={role.role}
+                      className="rounded-[1.4rem] border border-line/70 bg-white/[0.45] p-4"
+                    >
+                      <p className="font-serif-cn text-[1.22rem] leading-8 text-ink">
+                        {role.role}
+                      </p>
+                      <p className="mt-1 text-sm leading-7 text-accent">{role.scope}</p>
+                      <p className="mt-2 text-sm leading-7 text-muted">
+                        {role.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </aside>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}

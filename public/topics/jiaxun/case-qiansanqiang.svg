@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F6F1E8"/>
+  <rect x="34" y="34" width="1132" height="732" rx="38" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="944" cy="228" r="148" fill="#E8DDD1" fill-opacity="0.56"/>
+  <text x="118" y="164" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="10">崇文尚学 / 学术报国</text>
+  <text x="116" y="318" fill="#1F1A17" font-size="96" font-family="STSong, Songti SC, serif">钱三强</text>
+  <text x="118" y="404" fill="#6F5141" font-size="50" font-family="STSong, Songti SC, serif">核科学起步 • 学术根底</text>
+  <text x="120" y="514" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">把读书治学真正转化为国家层面的科学能力。</text>
+  <path d="M118 610H1038" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="120" y="680" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">案例图板：钱三强与中国原子能事业</text>
+  <defs>
+    <linearGradient id="bg" x1="60" y1="74" x2="1112" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#EEE2D5"/>
+    </linearGradient>
+  </defs>
+</svg>

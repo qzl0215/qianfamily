@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F6F1E8"/>
+  <rect x="34" y="34" width="1132" height="732" rx="38" fill="url(#bg)" stroke="#D7CCBE"/>
+  <circle cx="942" cy="228" r="148" fill="#E8DDD1" fill-opacity="0.56"/>
+  <text x="118" y="164" fill="#6B6258" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" letter-spacing="10">善事国家 / 科学报国</text>
+  <text x="116" y="318" fill="#1F1A17" font-size="96" font-family="STSong, Songti SC, serif">钱学森</text>
+  <text x="118" y="404" fill="#6F5141" font-size="50" font-family="STSong, Songti SC, serif">航天奠基 • 长远布局</text>
+  <text x="120" y="514" fill="#6B6258" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif">把个人所学投向国家长期能力建设。</text>
+  <path d="M118 610H1038" stroke="#D7CCBE" stroke-width="2"/>
+  <text x="120" y="680" fill="#6B6258" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif">案例图板：钱学森与中国航天事业</text>
+  <defs>
+    <linearGradient id="bg" x1="62" y1="76" x2="1112" y2="714" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF8F2"/>
+      <stop offset="1" stop-color="#EDE1D4"/>
+    </linearGradient>
+  </defs>
+</svg>

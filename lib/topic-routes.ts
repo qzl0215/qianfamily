@@ -12,19 +12,19 @@ export const topicRoutes: TopicRoute[] = [
     slug: "jiaxun",
     title: "钱氏家训",
     summary: "先从家训读懂钱氏精神，把善事国家、重德修身、崇文尚学放回真实的文化脉络。",
-    href: "/topics/jiaxun/",
+    href: "/heritage/jiafeng-jiaxun/",
   },
   {
     slug: "wuyue",
     title: "钱王与吴越",
-    summary: "从钱镠立国到纳土归宋，理解吴越为何被反复讲述为一条保境安民、重视民生的历史主线。",
-    href: "/topics/wuyue/",
+    summary: "从钱镠崛起、吴越立国到 978 年纳土归宋，理解这段历史为何长期被概括为保境安民、重视民生的治理传统。",
+    href: "/heritage/wuyue/",
   },
   {
     slug: "figures",
     title: "近代钱氏人物",
-    summary: "再回到近现代，看钱氏人物如何把家训中的担当、学问与气节落实到现代中国。",
-    href: "/topics/figures/",
+    summary: "从钱学森、钱三强、钱伟长等代表人物，看钱氏精神如何进入现代中国的科学、教育与公共文化。",
+    href: "/heritage/figures/",
   },
 ];
 
