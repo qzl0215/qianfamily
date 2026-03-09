@@ -11,6 +11,14 @@ export type PortalAction = {
   status?: string;
 };
 
+export type HomeDecisionCard = {
+  title: string;
+  href: string;
+  summary: string;
+  effortHint: string;
+  actionLabel: string;
+};
+
 export type PortalCard = {
   title: string;
   href: string;
@@ -100,27 +108,91 @@ export const homePrimaryActions: PortalAction[] = [
   {
     title: "寻根",
     href: "/genealogy/find-roots/",
-    summary: "先确认祖籍、支派和辈分线索，帮助族人从名字回到谱系与地缘。",
-    note: "公开可先读说明，登录后提交线索。",
+    summary: "先确认祖籍、支派和辈分线索，再把零散口述转成可核对的谱系信息。",
+    note: "建议先读 5 分钟说明，再提交线索。",
     status: "优先入口",
   },
   {
     title: "续谱",
     href: "/genealogy/continue/",
-    summary: "为已知支派补录新世系、迁徙信息和关键人物资料，保持谱牒连续。",
-    note: "登录后提交，进入审核流程。",
+    summary: "为已确认支派补录新世系与迁徙资料，让支派谱牒持续不断代。",
+    note: "先看格式要求，再登录提交。",
+    status: "高频动作",
   },
   {
     title: "活动报名",
     href: "/events/upcoming/",
-    summary: "从春祭、宗亲会到青年读书活动，把线上认同转成现实连接。",
-    note: "活动公开可看，报名与签到需登录。",
+    summary: "从春祭、宗亲联络到青年读书，把线上认同转成可参与的线下连接。",
+    note: "先看活动说明，再登录报名。",
+    status: "连接入口",
   },
   {
     title: "礼品选购",
     href: "/gifts/catalog/",
-    summary: "先理解文化意义，再选择家训卷轴、书签礼盒和祭祖纪念礼。",
-    note: "礼品公开浏览，订单与收货记录需登录。",
+    summary: "按祭祖、陈设与赠礼场景选择礼品，让文化表达进入家庭与活动现场。",
+    note: "先按场景筛选，再进入订单。",
+    status: "参与行动",
+  },
+];
+
+export const homeDecisionCards: HomeDecisionCard[] = [
+  {
+    title: "我是第一次来站",
+    href: "/heritage/",
+    summary: "先用文化传承建立认同，再进入寻根动作，避免只看入口不理解主线。",
+    effortHint: "预计 10 分钟建立主线认知",
+    actionLabel: "先读文化传承",
+  },
+  {
+    title: "我已有家谱线索",
+    href: "/genealogy/find-roots/",
+    summary: "直接进入寻根并按提交清单准备资料，减少反复退回与补充。",
+    effortHint: "建议准备 3 项基础线索",
+    actionLabel: "直接去寻根",
+  },
+  {
+    title: "我想参与线下宗亲活动",
+    href: "/events/upcoming/",
+    summary: "先看近期活动时间、地点与流程，再决定报名与参与方式。",
+    effortHint: "预计 5 分钟完成活动筛选",
+    actionLabel: "查看近期活动",
+  },
+  {
+    title: "我想做文化传播",
+    href: "/gifts/occasions/",
+    summary: "先按场景选择礼品，优先服务祭祖、家堂陈设与宗亲赠礼。",
+    effortHint: "先确定 1 个使用场景再选品",
+    actionLabel: "查看礼品场景",
+  },
+];
+
+export const firstVisitJourneyCards: PortalCard[] = [
+  {
+    eyebrow: "第一步",
+    title: "先建立文化认同",
+    href: "/heritage/",
+    summary: "先读家训、吴越历史与近代人物，明确“为何与钱氏家族相连”。",
+    meta: "文化认同",
+    actionLabel: "进入文化传承",
+    tags: ["家训", "历史", "人物"],
+  },
+  {
+    eyebrow: "第二步",
+    title: "再确认谱系归属",
+    href: "/genealogy/find-roots/",
+    summary: "从祖籍、辈分和迁徙线索进入寻根，再逐步进入续谱与接谱协作。",
+    meta: "谱系归属",
+    actionLabel: "进入寻根入口",
+    tags: ["寻根", "续谱", "接谱"],
+  },
+  {
+    eyebrow: "第三步",
+    title: "进入连接与行动",
+    href: "/events/",
+    summary: "通过祭祖活动与礼品场景，把认同与谱系关系转成现实参与和持续回流。",
+    meta: "宗亲连接 → 参与行动",
+    actionLabel: "查看活动与礼品",
+    tags: ["活动", "礼品", "回流"],
   },
 ];
 
@@ -190,7 +262,9 @@ export const genealogyCenterCards: PortalCard[] = [
 ];
 
 export const genealogyFacts: PortalFact[] = [
+  { label: "主线环节", value: "谱系归属" },
   { label: "定位", value: "唯一谱系入口中心" },
+  { label: "下一步", value: "进入祭祖活动与宗亲连接" },
   { label: "访问方式", value: "公开先读说明，登录后办事" },
   { label: "核心动作", value: "寻根、续谱、接谱、状态查询" },
 ];
@@ -273,33 +347,33 @@ export const announcementCards: PortalCard[] = [
     eyebrow: "宗亲动态",
     title: "家谱中心上线第一阶段办事入口",
     href: "/genealogy/",
-    summary: "寻根、续谱、接谱与提交状态查询统一收入口中心，减少平行入口造成的混乱。",
+    summary: "寻根、续谱、接谱与状态查询统一收入口中心，首次来站可按步骤进入对应动作。",
     meta: "站点更新",
-    actionLabel: "查看家谱中心",
+    actionLabel: "去家谱中心办事",
   },
   {
     eyebrow: "内容回流",
     title: "家训专题已升级为正式导读页",
     href: "/heritage/jiafeng-jiaxun/",
-    summary: "采用原句、图片和族人案例的结构，让文化内容先作为站点信任基础稳定下来。",
+    summary: "采用原句、图解与案例导读结构，帮助族人先建立文化认同，再进入谱系与活动。",
     meta: "内容更新",
-    actionLabel: "前往专题",
+    actionLabel: "进入家训导读",
   },
   {
     eyebrow: "活动公告",
     title: "春祭告祖礼进入筹备与报名说明阶段",
     href: "/events/upcoming/",
-    summary: "活动页将统一承载时间、地点、流程、报名和签到说明，逐步形成完整活动系统。",
+    summary: "活动页统一承载时间、地点、流程与报名说明，减少信息分散带来的沟通成本。",
     meta: "活动预告",
-    actionLabel: "查看近期活动",
+    actionLabel: "查看报名说明",
   },
   {
     eyebrow: "礼品计划",
     title: "宣传礼品频道开始按场景组织内容",
     href: "/gifts/occasions/",
-    summary: "不做单纯堆货页，而是先按祭祖、赠礼、阅读、纪念等场景理解礼品的文化用途。",
+    summary: "礼品先按祭祖、赠礼与阅读场景组织，再进入商品详情与订单能力。",
     meta: "频道规划",
-    actionLabel: "查看礼品场景",
+    actionLabel: "进入礼品场景",
   },
 ];
 
@@ -322,7 +396,9 @@ export const accessRoles: PortalRole[] = [
 ];
 
 export const heritageOverviewFacts: PortalFact[] = [
+  { label: "主线环节", value: "文化认同" },
   { label: "总定位", value: "文化认同入口" },
+  { label: "下一步", value: "进入家谱中心确认谱系归属" },
   { label: "四个栏目", value: "家风家训、吴越历史、近代人物、族人故事" },
   { label: "核心目标", value: "先认同，再进入谱系与组织连接" },
 ];
@@ -365,7 +441,9 @@ export const storyCards: PortalCard[] = [
 ];
 
 export const eventsOverviewFacts: PortalFact[] = [
+  { label: "主线环节", value: "宗亲连接" },
   { label: "频道定位", value: "宗亲连接入口" },
+  { label: "下一步", value: "进入礼品场景与参与行动" },
   { label: "公开可看", value: "活动详情、时间、地点、历史回顾" },
   { label: "登录可办", value: "报名、签到、通知接收、个人记录" },
 ];
@@ -417,7 +495,9 @@ export const eventHistoryCards: PortalCard[] = [
 ];
 
 export const giftsOverviewFacts: PortalFact[] = [
+  { label: "主线环节", value: "参与行动" },
   { label: "频道定位", value: "文化商品与纪念传播入口" },
+  { label: "下一步", value: "活动与故事回流为公共内容" },
   { label: "展示逻辑", value: "先讲文化意义，再讲商品用途" },
   { label: "后续能力", value: "登录下单、订单跟踪、活动定制" },
 ];

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [[ -z "${PROJECT_ROOT}" ]]; then
+  echo "[pre-commit][error] not inside git repository" >&2
+  exit 1
+fi
+
+# shellcheck source=/dev/null
+source "${PROJECT_ROOT}/scripts/agent_workflow_lib.sh"
+aw_cd_repo_root
+aw_ensure_not_protected_branch
+aw_ensure_codex_branch
+
+npm run typecheck

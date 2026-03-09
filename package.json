@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:fast": "npm run typecheck && npm run build",
+    "check": "npm run check:fast"
   },
   "dependencies": {
     "next": "15.5.12",

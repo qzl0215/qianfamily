@@ -1,5 +1,7 @@
 import { CardSection } from "@/components/portal/CardSection";
 import { PageHero } from "@/components/portal/PageHero";
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Container } from "@/components/ui/Container";
 import { storyCards, cultureHighlightCards, heritageOverviewFacts } from "@/lib/portal-content";
 
 export default function HeritagePage() {
@@ -33,6 +35,58 @@ export default function HeritagePage() {
         cards={storyCards}
         columns="3"
       />
+
+      <section className="page-section pt-4">
+        <Container>
+          <div className="surface-card">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.74fr)_minmax(0,1fr)] lg:items-start">
+              <div className="space-y-5">
+                <p className="ornament-line">30 秒导读</p>
+                <h2 className="section-title">先读三条主线，再进入归属与参与</h2>
+                <p className="section-copy">
+                  文化传承不是独立终点，而是全站主线的起点。先看家训建立价值认同，再用历史与人物确认家族脉络，最后进入寻根和活动完成现实连接。
+                </p>
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <ButtonLink href="/genealogy/find-roots/">认同后去寻根</ButtonLink>
+                  <ButtonLink href="/events/upcoming/" variant="secondary">
+                    认同后去看活动
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-3">
+                <article className="subtle-card">
+                  <p className="eyebrow">1 / 价值底板</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
+                    家训先回答“为何相连”
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    从善事国家、重德修身到崇文尚学，先建立家族共同价值。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">2 / 历史脉络</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
+                    吴越与人物回答“从何而来”
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    把历史与近现代人物放在同一脉络里，形成完整认知。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">3 / 现实行动</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
+                    回到寻根与活动完成连接
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    文化认同最终应转成谱系归属与宗亲参与，而不是停留在阅读。
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

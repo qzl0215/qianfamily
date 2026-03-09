@@ -6,6 +6,8 @@ import {
   accessRoles,
   announcementCards,
   cultureHighlightCards,
+  homeDecisionCards,
+  firstVisitJourneyCards,
   genealogyCenterCards,
   giftHighlightCards,
   genealogyFacts,
@@ -16,6 +18,8 @@ import {
 } from "@/lib/portal-content";
 
 export function PortalHomePage() {
+  const latestUpdates = announcementCards.slice(0, 3);
+
   return (
     <>
       <section className="page-section pb-10 pt-10 sm:pt-14 lg:pt-16" id="portal-home">
@@ -31,10 +35,10 @@ export function PortalHomePage() {
                   </h1>
                 </div>
                 <p className="hero-deck">
-                  这不是单纯的文化站，也不是只做工具的办事页，而是钱氏族人的宗亲门户。
+                  这不是单纯的文化站，也不是只做工具的办事页，而是把认同、归属、连接与行动合成一条路径的宗亲门户。
                 </p>
                 <p className="hero-summary">
-                  网站的总逻辑固定为“文化认同、谱系归属、宗亲连接、参与行动、内容回流”。首页优先给出寻根、续谱、活动报名和礼品选购四个动作入口，同时保留家训、吴越与人物内容作为信任基础。
+                  网站总逻辑固定为“文化认同、谱系归属、宗亲连接、参与行动、内容回流”。首页优先给出可执行入口，并用文化主线提供信任基础。
                 </p>
 
                 <div className="editorial-band grid gap-0 sm:grid-cols-5">
@@ -62,6 +66,26 @@ export function PortalHomePage() {
 
             <aside className="surface-card hero-side-panel">
               <div className="space-y-5">
+                <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                    最新动态
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {latestUpdates.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="block rounded-[1rem] border border-line/65 bg-white/[0.42] px-4 py-3 text-sm leading-7 text-muted transition hover:border-accent/20 hover:text-ink"
+                      >
+                        <span className="block text-xs tracking-[0.15em] text-accent">
+                          {item.eyebrow}
+                        </span>
+                        <span className="mt-1 block font-medium text-ink">{item.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
                 <p className="ornament-line">四个主动作</p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {homePrimaryActions.map((action) => (
@@ -103,6 +127,88 @@ export function PortalHomePage() {
                 </div>
               </div>
             </aside>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="quick-decision">
+        <Container>
+          <div className="soft-panel">
+            <div className="space-y-4">
+              <p className="ornament-line">我现在该做什么</p>
+              <h2 className="section-title">按当前状态进入，不必从头浏览全部频道</h2>
+              <p className="section-copy">
+                首次来访者最容易迷失在信息里。把路径改成“按状态分流”，可显著缩短决策时间并提高行动转化。
+              </p>
+            </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {homeDecisionCards.map((card) => (
+                <article key={card.title} className="subtle-card">
+                  <span className="status-chip">{card.effortHint}</span>
+                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
+                    {card.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">{card.summary}</p>
+                  <Link
+                    href={card.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {card.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4" id="first-visit-journey">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="space-y-4">
+              <p className="ornament-line">首次来站建议路径</p>
+              <h2 className="section-title">先认同，再归属，再连接与行动</h2>
+              <p className="section-copy">
+                第一次进入网站时，优先按三步完成理解与行动。先建立文化认同，再确认谱系归属，最后进入活动和礼品场景，把线上认同变成现实参与。
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {firstVisitJourneyCards.map((card) => (
+                <article key={card.title} className="subtle-card">
+                  {card.eyebrow ? <p className="eyebrow">{card.eyebrow}</p> : null}
+                  <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
+                    {card.title}
+                  </h3>
+                  {card.meta ? (
+                    <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
+                  ) : null}
+                  <p className="mt-4 text-[0.98rem] leading-8 text-muted">
+                    {card.summary}
+                  </p>
+                  {card.tags ? (
+                    <div className="mt-5 flex flex-wrap gap-2 text-sm text-accent">
+                      {card.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-accent/10 bg-white/50 px-3 py-1.5"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                  <Link
+                    href={card.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {card.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

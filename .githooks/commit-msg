@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+COMMIT_MSG_FILE="${1:-}"
+if [[ -z "$COMMIT_MSG_FILE" || ! -f "$COMMIT_MSG_FILE" ]]; then
+  echo "[commit-msg][error] commit message file not found" >&2
+  exit 1
+fi
+
+SUBJECT="$(head -n 1 "$COMMIT_MSG_FILE")"
+PATTERN='^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2} .+'
+
+if [[ ! "$SUBJECT" =~ $PATTERN ]]; then
+  echo "[commit-msg][error] commit subject must be: YYYY-MM-DD HH:MM 中文备注" >&2
+  exit 1
+fi
