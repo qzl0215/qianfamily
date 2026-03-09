@@ -153,6 +153,58 @@ export default function EventsPage() {
           </div>
         </Container>
       </section>
+
+      <section className="page-section pt-4">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] lg:items-start">
+              <div className="space-y-5">
+                <p className="ornament-line">活动后 72 小时回流清单</p>
+                <h2 className="section-title">把参与结果尽快沉淀，避免“活动结束即断流”</h2>
+                <p className="section-copy">
+                  活动价值不只在当天完成，而在于 72 小时内回流成公共内容。按清单执行可显著提高后续可复用性。
+                </p>
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <ButtonLink href="/events/history/">上传到历届回顾入口</ButtonLink>
+                  <ButtonLink href="/heritage/stories/" variant="secondary">
+                    转成族人故事沉淀
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <article className="subtle-card">
+                  <p className="eyebrow">活动后 24h</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    整理素材并标注时间地点
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    先整理照片、流程纪要和参与名单，统一标注时间、地点与活动名称，避免后续素材失焦。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">活动后 48h</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    形成 3 条可复用结论
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    总结“本次做得好、可改进、下次沿用”三条结论，优先给下一轮活动组织者直接复用。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">活动后 72h</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    回流到回顾与故事双入口
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    一份进入活动回顾保存事实资料，一份进入族人故事保留口述与感受，形成可持续公共记忆。
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

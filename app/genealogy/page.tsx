@@ -211,6 +211,63 @@ export default function GenealogyPage() {
           </div>
         </Container>
       </section>
+
+      <section className="page-section pt-4">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="space-y-4">
+              <p className="ornament-line">提交前一一映射自检</p>
+              <h2 className="section-title">把“准备动作”直接对齐到“可避免的退回原因”</h2>
+              <p className="section-copy">
+                只看准备清单容易遗漏重点，只看退回原因又容易焦虑。把两者合并为一张自检表，提交前逐条勾选更高效。
+              </p>
+            </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
+              <article className="subtle-card">
+                <p className="eyebrow">映射 1</p>
+                <h3 className="mt-4 font-serif-cn text-[1.2rem] leading-tight text-ink">
+                  补到县区/村镇
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">对应避免：祖籍信息过泛（TOP1）</p>
+              </article>
+              <article className="subtle-card">
+                <p className="eyebrow">映射 2</p>
+                <h3 className="mt-4 font-serif-cn text-[1.2rem] leading-tight text-ink">
+                  写清辈分与称谓
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">对应避免：辈分线索缺失（TOP2）</p>
+              </article>
+              <article className="subtle-card">
+                <p className="eyebrow">映射 3</p>
+                <h3 className="mt-4 font-serif-cn text-[1.2rem] leading-tight text-ink">
+                  关键年份先补区间
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">对应避免：时间节点不完整（TOP3）</p>
+              </article>
+              <article className="subtle-card">
+                <p className="eyebrow">映射 4</p>
+                <h3 className="mt-4 font-serif-cn text-[1.2rem] leading-tight text-ink">
+                  每条信息标注来源
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">对应避免：证据来源未标注（TOP4）</p>
+              </article>
+              <article className="subtle-card">
+                <p className="eyebrow">映射 5</p>
+                <h3 className="mt-4 font-serif-cn text-[1.2rem] leading-tight text-ink">
+                  预留可回访联系人
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-muted">对应避免：联系方式不可回访（TOP5）</p>
+              </article>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <ButtonLink href="/genealogy/find-roots/">完成自检后去寻根提交</ButtonLink>
+              <ButtonLink href="/genealogy/status/" variant="secondary">
+                我已提交，查看进度说明
+              </ButtonLink>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

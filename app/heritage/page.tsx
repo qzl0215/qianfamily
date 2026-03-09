@@ -87,6 +87,58 @@ export default function HeritagePage() {
           </div>
         </Container>
       </section>
+
+      <section className="page-section pt-4">
+        <Container>
+          <div className="soft-panel soft-panel-muted">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] lg:items-start">
+              <div className="space-y-5">
+                <p className="ornament-line">读完后立刻执行</p>
+                <h2 className="section-title">把文化阅读转成 3 分钟可完成的寻根启动动作</h2>
+                <p className="section-copy">
+                  读完家训、历史与人物后，不建议停留在“我理解了”。先完成一个最小寻根动作，可让文化认同立刻进入谱系归属阶段。
+                </p>
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <ButtonLink href="/genealogy/find-roots/">现在去做寻根首步</ButtonLink>
+                  <ButtonLink href="/genealogy/" variant="secondary">
+                    查看家谱中心全流程
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-3">
+                <article className="subtle-card">
+                  <p className="eyebrow">1 / 写下线索</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.3rem] leading-tight text-ink">
+                    先记 1 位可回访长辈
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    先确认一位能补充家族口述的联系人，优先补齐祖籍、辈分或迁徙记忆中的任一项。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">2 / 锁定最小范围</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.3rem] leading-tight text-ink">
+                    补到县区或村镇级别
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    地域越具体，匹配支派效率越高。先把祖籍信息收敛到县区/村镇，避免“省级信息过泛”被退回。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">3 / 进入提交页</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.3rem] leading-tight text-ink">
+                    带着 3 条线索提交
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    建议至少携带“祖籍范围 + 辈分称谓 + 关键年份”三条信息，先完成首提，再按进度页持续补充。
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

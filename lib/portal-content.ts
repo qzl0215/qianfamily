@@ -16,6 +16,8 @@ export type HomeDecisionCard = {
   href: string;
   summary: string;
   effortHint: string;
+  outcomeHint: string;
+  nextStep: string;
   actionLabel: string;
 };
 
@@ -141,6 +143,8 @@ export const homeDecisionCards: HomeDecisionCard[] = [
     href: "/heritage/",
     summary: "先用文化传承建立认同，再进入寻根动作，避免只看入口不理解主线。",
     effortHint: "预计 10 分钟建立主线认知",
+    outcomeHint: "可见产出：获得一条清晰的入站主线路径",
+    nextStep: "完成后建议进入：家谱寻根",
     actionLabel: "先读文化传承",
   },
   {
@@ -148,6 +152,8 @@ export const homeDecisionCards: HomeDecisionCard[] = [
     href: "/genealogy/find-roots/",
     summary: "直接进入寻根并按提交清单准备资料，减少反复退回与补充。",
     effortHint: "建议准备 3 项基础线索",
+    outcomeHint: "可见产出：形成一份可提交的寻根资料包",
+    nextStep: "提交线索后建议进入：我的提交 / 进度",
     actionLabel: "直接去寻根",
   },
   {
@@ -155,6 +161,8 @@ export const homeDecisionCards: HomeDecisionCard[] = [
     href: "/events/upcoming/",
     summary: "先看近期活动时间、地点与流程，再决定报名与参与方式。",
     effortHint: "预计 5 分钟完成活动筛选",
+    outcomeHint: "可见产出：确定一场可报名的近期活动",
+    nextStep: "报名完成后建议进入：宣传礼品场景",
     actionLabel: "查看近期活动",
   },
   {
@@ -162,6 +170,8 @@ export const homeDecisionCards: HomeDecisionCard[] = [
     href: "/gifts/occasions/",
     summary: "先按场景选择礼品，优先服务祭祖、家堂陈设与宗亲赠礼。",
     effortHint: "先确定 1 个使用场景再选品",
+    outcomeHint: "可见产出：确定一组匹配场景的礼品方案",
+    nextStep: "完成选品后建议进入：祭祖活动日程",
     actionLabel: "查看礼品场景",
   },
 ];

@@ -19,6 +19,13 @@ import {
 
 export function PortalHomePage() {
   const latestUpdates = announcementCards.slice(0, 3);
+  const weeklyFocus = {
+    title: "本周推荐先做一步",
+    summary: "如果你是第一次来站，先读 10 分钟文化传承，再进入寻根提交线索。",
+    reason: "为何本周优先：首次访客占比更高时，先建立认同再办事可明显降低路径中断。",
+    href: "/heritage/",
+    actionLabel: "先走这一步",
+  };
 
   return (
     <>
@@ -86,6 +93,21 @@ export function PortalHomePage() {
                   </div>
                 </div>
 
+                <div className="rounded-[1.55rem] border border-accent/20 bg-white/[0.4] p-5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
+                    {weeklyFocus.title}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-ink">{weeklyFocus.summary}</p>
+                  <p className="mt-2 text-xs leading-6 text-muted">{weeklyFocus.reason}</p>
+                  <Link
+                    href={weeklyFocus.href}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                  >
+                    {weeklyFocus.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </div>
+
                 <p className="ornament-line">四个主动作</p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {homePrimaryActions.map((action) => (
@@ -149,6 +171,8 @@ export function PortalHomePage() {
                     {card.title}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-muted">{card.summary}</p>
+                  <p className="mt-3 text-xs leading-6 text-ink/80">{card.outcomeHint}</p>
+                  <p className="mt-4 text-xs leading-6 text-accent">{card.nextStep}</p>
                   <Link
                     href={card.href}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
