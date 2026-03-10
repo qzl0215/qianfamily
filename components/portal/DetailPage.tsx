@@ -31,7 +31,7 @@ export function DetailPage({ content }: DetailPageProps) {
               }
             : undefined
         }
-        asideTitle="页面角色"
+        asideTitle="开始前"
         asideBody={content.note}
       />
 
@@ -40,9 +40,9 @@ export function DetailPage({ content }: DetailPageProps) {
           <div className="soft-panel">
             <div className="space-y-4">
               <p className="ornament-line">页面重点</p>
-              <h2 className="section-title">一页同时承担说明、连接与回流</h2>
+              <h2 className="section-title">先看这三项重点</h2>
               <p className="section-copy">
-                无论是活动详情还是礼品详情，都不该只是单次展示页，而应承担公开说明、行动入口与后续内容沉淀三种职责。
+                先看重点，再决定是否继续参与或选择。
               </p>
             </div>
 
@@ -70,8 +70,8 @@ export function DetailPage({ content }: DetailPageProps) {
           <div className="surface-card">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
               <div className="space-y-5">
-                <p className="ornament-line">页面应承载的信息</p>
-                <h2 className="section-title">让详情页不是“一张图 + 一句话”</h2>
+                <p className="ornament-line">开始前确认</p>
+                <h2 className="section-title">先确认这些关键信息</h2>
                 <div className="stack-list">
                   {content.checklist.map((item) => (
                     <div key={item} className="stack-list-item">
@@ -88,7 +88,7 @@ export function DetailPage({ content }: DetailPageProps) {
                   下一步
                 </p>
                 <p className="mt-4 font-serif-cn text-[1.35rem] leading-8 text-ink">
-                  公开先说清楚，动作后续再接入登录。
+                  看清重点后，再进入下一步。
                 </p>
                 <p className="mt-3 text-sm leading-7 text-muted">{content.note}</p>
                 <div className="mt-6 flex flex-wrap gap-4">
@@ -112,8 +112,8 @@ export function DetailPage({ content }: DetailPageProps) {
 
       <FaqSection
         eyebrow="常见问题"
-        title="把开放浏览和登录后动作区分清楚"
-        description="活动详情与礼品详情都应先公开说明，再把报名、签到、下单、订单等动作收束到登录后的流程里。"
+        title="常见问题"
+        description="先把最常见的参与和选购问题说清。"
         items={content.faq}
       />
     </>

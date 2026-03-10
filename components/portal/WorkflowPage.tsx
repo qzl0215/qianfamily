@@ -31,7 +31,7 @@ export function WorkflowPage({ content }: WorkflowPageProps) {
               }
             : undefined
         }
-        asideTitle="当前状态"
+        asideTitle="开始前"
         asideBody={content.note}
       />
 
@@ -39,10 +39,10 @@ export function WorkflowPage({ content }: WorkflowPageProps) {
         <Container>
           <div className="soft-panel soft-panel-muted">
             <div className="space-y-4">
-              <p className="ornament-line">办理逻辑</p>
-              <h2 className="section-title">先读流程，再进入后续能力</h2>
+              <p className="ornament-line">办理步骤</p>
+              <h2 className="section-title">先看这三步</h2>
               <p className="section-copy">
-                这类页面的目的不是立刻要求用户填写，而是先把步骤、所需信息和后续处理方式讲清楚。
+                按顺序准备，提交和补充都会更顺。
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export function WorkflowPage({ content }: WorkflowPageProps) {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
               <div className="space-y-5">
                 <p className="ornament-line">你需要准备什么</p>
-                <h2 className="section-title">进入动作前，先把信息结构整理清楚</h2>
+                <h2 className="section-title">开始前先确认这些信息</h2>
                 <div className="stack-list">
                   {content.checklist.map((item) => (
                     <div key={item} className="stack-list-item">
@@ -88,7 +88,7 @@ export function WorkflowPage({ content }: WorkflowPageProps) {
                   下一步
                 </p>
                 <p className="mt-4 font-serif-cn text-[1.35rem] leading-8 text-ink">
-                  当前先完成结构说明，后续接入登录能力。
+                  按清单准备好，再进入对应入口。
                 </p>
                 <p className="mt-3 text-sm leading-7 text-muted">{content.note}</p>
                 <div className="mt-6 flex flex-wrap gap-4">
@@ -112,8 +112,8 @@ export function WorkflowPage({ content }: WorkflowPageProps) {
 
       <FaqSection
         eyebrow="常见问题"
-        title="先把规则说清，后面功能才不会变形"
-        description="这些说明是为了让家谱中心、活动系统和礼品系统在真正接入登录后，仍然保持清晰的办事逻辑。"
+        title="常见问题"
+        description="先把最常见的疑问说清。"
         items={content.faq}
       />
     </>

@@ -1,13 +1,13 @@
 # Preview Links
 
-Last updated: 2026-03-10 21:11:03 CST
+Last updated: 2026-03-10 21:20:05 CST
 
 ## Latest
 - Status: 计划直发生产。
 - URL: https://qianfamily.online/
 - Branch: `main`
 - Commit: `本轮发布提交`
-- Scope: Iteration 15 三个专题页内容减法，压缩抽象解释并强化用户导读。
+- Scope: Iteration 16 工作流页与详情页内容减法，删除组件级自述并收紧 FAQ。
 - Evidence: 以本轮 `npm run build` 通过为发布前验证基线。
 
 ## Notes

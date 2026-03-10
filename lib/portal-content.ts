@@ -549,7 +549,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
   title: "寻根",
   lead: "先从祖籍、辈分、迁徙和口述线索开始，把散落的信息重新接回谱系。",
   summary:
-    "这个页面服务于第一次进入家谱中心的族人。先理解需要哪些信息，再提交线索，避免一上来就填表却不知道自己要找什么。",
+    "第一次来先确认需要哪些线索，再提交资料。",
   chips: ["公开说明", "登录后提交", "适合首次进入"],
   facts: [
     { label: "目标", value: "确认祖籍、支派、代际线索" },
@@ -563,7 +563,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
     },
     {
       title: "明确你想确认什么",
-      description: "是想找祖籍、找支派、找上一代世系，还是确认家训、宗祠和活动关系，目标不同，线索也不同。",
+      description: "先确定你要找祖籍、支派还是上一代世系，再整理对应线索。",
     },
     {
       title: "登录后提交线索",
@@ -579,7 +579,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
   faq: [
     {
       question: "没有旧谱，还能寻根吗？",
-      answer: "可以。寻根并不只依赖旧谱，祖籍、辈分、地名、口述和迁徙信息都可能成为有效线索。",
+      answer: "可以。祖籍、辈分、地名、口述和迁徙信息都可能成为有效线索。",
     },
     {
       question: "寻根一定能马上匹配到支派吗？",
@@ -587,7 +587,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
     },
     {
       question: "为什么先看说明再提交？",
-      answer: "因为寻根最怕材料散乱。先看说明能减少无效提交，也能帮助族人知道自己还需要补什么信息。",
+      answer: "先把线索整理清楚，提交时更容易一次说完整。",
     },
   ],
   primaryAction: { label: "进入家谱中心总览", href: "/genealogy/" },
@@ -600,7 +600,7 @@ export const genealogyContinueContent: WorkflowPageContent = {
   title: "家谱续谱",
   lead: "把新增成员、迁居和重要资料按支派继续补全。",
   summary:
-    "这个页面面向已经确认支派或掌握较完整家族信息的族人，目标是把新增世系、婚配、迁移和人物资料规范地补入系统。",
+    "适合已确认支派、准备继续补录资料的族人。",
   chips: ["登录后提交", "支派协作", "资料审核"],
   facts: [
     { label: "适合对象", value: "支派负责人、资料保管者、长期参与族人" },
@@ -630,11 +630,11 @@ export const genealogyContinueContent: WorkflowPageContent = {
   faq: [
     {
       question: "续谱为什么要审核？",
-      answer: "续谱直接影响整支派的谱系结构，需要核对重复、世代关系和材料真实性，不能只靠单次提交直接入谱。",
+      answer: "续谱会影响整支派谱系，需要先核对重复、世代关系和材料真实性。",
     },
     {
       question: "能不能先记下来，后面再补材料？",
-      answer: "可以先整理草稿，但正式提交时仍建议至少附上基础说明和能支持判断的材料。",
+      answer: "可以先整理草稿，但正式提交时仍建议附上基础说明和佐证材料。",
     },
     {
       question: "续谱后如何继续补充？",
@@ -651,7 +651,7 @@ export const genealogyTakeoverContent: WorkflowPageContent = {
   title: "我接家谱",
   lead: "接手支派维护后，需要持续联络、整理和校对资料。",
   summary:
-    "这个页面用于说明支派维护者如何接手谱牒工作，以及接手之后需要承担哪些长期职责和协作关系。",
+    "适合准备接手支派维护的族人，先确认职责和资料范围。",
   chips: ["长期维护", "支派协作", "责任明确"],
   facts: [
     { label: "定位", value: "支派维护与接续入口" },
@@ -681,11 +681,11 @@ export const genealogyTakeoverContent: WorkflowPageContent = {
   faq: [
     {
       question: "接谱是否等于拥有全部决定权？",
-      answer: "不是。接谱更像维护责任，需要在支派和平台协作下推进，不是个人独断。",
+      answer: "接谱需要与支派和管理员协作推进，不是个人单独决定。",
     },
     {
       question: "没有完整旧谱还能接谱吗？",
-      answer: "可以，但需要明确你掌握的范围和缺口，接谱本身也会推动资料再搜集与联络。",
+      answer: "可以，但要先说明你掌握的范围和缺口，再逐步补齐。",
     },
     {
       question: "接谱后先做什么？",
@@ -700,9 +700,9 @@ export const genealogyTakeoverContent: WorkflowPageContent = {
 export const genealogyStatusContent: WorkflowPageContent = {
   eyebrow: "家谱中心",
   title: "我的提交 / 进度",
-  lead: "所有寻根、续谱和接谱动作，都应该有明确的状态回执和补充说明入口。",
+  lead: "提交后，可在这里看状态、补充要求和处理结果。",
   summary:
-    "这里集中说明提交后会看到的状态，以及需要补充材料时该怎么处理。",
+    "先看状态，再按提示补材料或回看结果。",
   chips: ["个人记录", "进度回执", "补充说明"],
   facts: [
     { label: "查看对象", value: "寻根、续谱、接谱、活动报名、礼品订单" },
@@ -732,7 +732,7 @@ export const genealogyStatusContent: WorkflowPageContent = {
   faq: [
     {
       question: "这里能看哪些记录？",
-      answer: "寻根、续谱、接谱，以及后续的活动和礼品记录都会汇总在同一处。",
+      answer: "寻根、续谱、接谱，以及后续的活动和礼品记录都会汇总在这里。",
     },
     {
       question: "看到“需补充”该做什么？",
@@ -768,12 +768,12 @@ export const eventDetails: DetailPageContent[] = [
         description: "包括告祭、敬香、家训诵读、支派见面与活动合影，兼顾礼仪与现实连接。",
       },
       {
-        title: "页面作用",
-        description: "集中给出活动说明、参加须知和现场安排。",
+        title: "参加前看什么",
+        description: "先看活动说明、参加须知和现场安排。",
       },
       {
-        title: "内容回流",
-        description: "活动结束后，照片、发言与家训共读片段会回流到首页动态和文化栏目。",
+        title: "活动后看什么",
+        description: "活动结束后，可回看照片、发言和家训共读片段。",
       },
     ],
     checklist: [
@@ -784,7 +784,7 @@ export const eventDetails: DetailPageContent[] = [
     faq: [
       {
         question: "非钱氏公众能看到活动页吗？",
-        answer: "可以。活动详情公开可看，但报名、签到和部分参与通知仍需登录后进行。",
+        answer: "可以。活动详情公开可看，报名和签到仍需按后续流程进行。",
       },
       {
         question: "报名后如何查看状态？",
@@ -830,11 +830,11 @@ export const eventDetails: DetailPageContent[] = [
     faq: [
       {
         question: "是否只有代表才能参加？",
-        answer: "正式代表会有名额要求，但活动页也可承载面向更广族人的说明、回顾与后续参与方式。",
+        answer: "正式代表会有名额要求，但活动说明和回顾对更多族人开放。",
       },
       {
         question: "活动内容会沉淀到哪里？",
-        answer: "会进入活动回顾、族人故事和首页动态，形成内容回流。",
+        answer: "会进入活动回顾、族人故事和首页动态。",
       },
     ],
     primaryAction: { label: "查看近期活动", href: "/events/upcoming/" },
@@ -850,7 +850,7 @@ export const giftDetails: DetailPageContent[] = [
     title: "钱氏家训卷轴",
     lead: "把家训核心句转化为可陈设、可赠送、可长期观看的文化物件。",
     summary:
-      "适合用于家堂、书房、宗祠陈设或家族赠礼，先看内容和场景再选择规格。",
+      "适合家堂、书房、宗祠陈设或家族赠礼。",
     chips: ["家训", "陈设", "赠礼"],
     facts: [
       { label: "适用场景", value: "家堂、书房、宗祠、赠礼" },
@@ -860,7 +860,7 @@ export const giftDetails: DetailPageContent[] = [
     highlights: [
       {
         title: "文化意义",
-        description: "让家训不只停在页面阅读，而能进入家庭与公共空间的日常观看。",
+        description: "把家训内容带进家庭与公共空间的日常观看。",
       },
       {
         title: "展示方式",
@@ -868,7 +868,7 @@ export const giftDetails: DetailPageContent[] = [
       },
       {
         title: "传播作用",
-        description: "适合作为家庭礼、宗亲礼和活动纪念礼，承担低门槛传播作用。",
+        description: "适合作为家庭礼、宗亲礼和活动纪念礼。",
       },
     ],
     checklist: [
@@ -896,7 +896,7 @@ export const giftDetails: DetailPageContent[] = [
     title: "吴越记忆礼盒",
     lead: "围绕钱王、吴越和长三角文化记忆设计的活动纪念礼。",
     summary:
-      "适合活动纪念、宗亲联谊和伴手礼场景，先看主题再判断用途。",
+      "适合活动纪念、宗亲联谊和伴手礼场景。",
     chips: ["吴越", "纪念", "活动伴手礼"],
     facts: [
       { label: "适用场景", value: "祭祖、联谊、会务纪念" },
@@ -914,7 +914,7 @@ export const giftDetails: DetailPageContent[] = [
       },
       {
         title: "传播价值",
-        description: "礼品既是纪念物，也是把历史专题延展到现实场景的传播媒介。",
+        description: "可把历史主题延展到现实场景。",
       },
     ],
     checklist: [
@@ -977,7 +977,7 @@ export const eventsMyContent: WorkflowPageContent = {
     },
     {
       question: "未登录可以看到这里吗？",
-      answer: "当前可看到结构说明，但真正的个人记录会在登录后展示。",
+      answer: "未登录只能看入口说明，个人记录需登录后查看。",
     },
   ],
   primaryAction: { label: "查看近期活动", href: "/events/upcoming/" },
@@ -1000,7 +1000,7 @@ export const giftOrdersContent: WorkflowPageContent = {
   steps: [
     {
       title: "查看当前订单",
-      description: "清楚知道已下单、待发货、运输中还是已完成，避免礼品频道变成一次性展示。",
+      description: "先看已下单、待发货、运输中还是已完成。",
     },
     {
       title: "管理收货信息",
