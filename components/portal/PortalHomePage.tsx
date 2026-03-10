@@ -22,7 +22,7 @@ export function PortalHomePage() {
   const weeklyFocus = {
     title: "本周推荐先做一步",
     summary: "如果你是第一次来站，先读 10 分钟文化传承，再进入寻根提交线索。",
-    reason: "为何本周优先：首次访客占比更高时，先建立认同再办事可明显降低路径中断。",
+    reason: "为何本周优先：先建立家族认同再提交线索，通常更容易一次走通。",
     checklist: [
       "先读 1 篇家训或人物内容，确认家族主线。",
       "记录 3 条可核对线索：祖籍、辈分、迁徙。",
@@ -32,7 +32,32 @@ export function PortalHomePage() {
     actionLabel: "先走这一步",
     nextHref: "/genealogy/find-roots/",
     nextActionLabel: "完成后去寻根",
+    skipHref: "/genealogy/find-roots/",
+    skipActionLabel: "已有线索，直接去寻根",
   };
+  const returnFlowCards = [
+    {
+      eyebrow: "寻根后",
+      title: "补一条迁徙口述",
+      summary: "把本次确认的祖籍或迁徙线索沉淀到族人故事，供后续寻根者复用。",
+      href: "/heritage/stories/",
+      actionLabel: "去提交故事线索",
+    },
+    {
+      eyebrow: "活动后",
+      title: "上传一份回顾素材",
+      summary: "将照片、纪要或流程心得回流到历届回顾，保持活动经验可追溯。",
+      href: "/events/history/",
+      actionLabel: "去历届回顾",
+    },
+    {
+      eyebrow: "礼品传播后",
+      title: "记录使用场景反馈",
+      summary: "补一条礼品使用情境和反馈，帮助后续族人更快判断适用场景。",
+      href: "/gifts/occasions/",
+      actionLabel: "去礼品场景页",
+    },
+  ] as const;
 
   return (
     <>
@@ -49,10 +74,10 @@ export function PortalHomePage() {
                   </h1>
                 </div>
                 <p className="hero-deck">
-                  这不是单纯的文化站，也不是只做工具的办事页，而是把认同、归属、连接与行动合成一条路径的宗亲门户。
+                  无论你是第一次来站还是已有线索，都可以在这里先确认“我该去哪里、先做什么、做完后去哪一步”。
                 </p>
                 <p className="hero-summary">
-                  网站总逻辑固定为“文化认同、谱系归属、宗亲连接、参与行动、内容回流”。首页优先给出可执行入口，并用文化主线提供信任基础。
+                  先按你的当前状态进入入口，再把完成结果回流为公共内容，形成“文化认同、谱系归属、宗亲连接、参与行动、内容回流”的连续路径。
                 </p>
 
                 <div className="editorial-band grid gap-0 sm:grid-cols-5">
@@ -127,6 +152,16 @@ export function PortalHomePage() {
                     {weeklyFocus.nextActionLabel}
                     <span aria-hidden="true">↗</span>
                   </Link>
+                  <p className="mt-3 text-xs leading-6 text-muted">
+                    若你已准备好家谱线索，可跳过本周推荐直接进入寻根。
+                  </p>
+                  <Link
+                    href={weeklyFocus.skipHref}
+                    className="mt-2 inline-flex items-center gap-2 text-xs font-medium text-muted underline-offset-4 hover:text-ink hover:underline"
+                  >
+                    {weeklyFocus.skipActionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
                 </div>
 
                 <p className="ornament-line">四个主动作</p>
@@ -159,13 +194,13 @@ export function PortalHomePage() {
 
                 <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
-                    门户判断
+                    给你的首页建议
                   </p>
                   <p className="mt-3 font-serif-cn text-[1.28rem] leading-8 text-ink">
-                    先把族人的办事入口立住，再让文化内容成为稳定的信任底板。
+                    先确定你的当前状态，再进入对应入口，效率最高。
                   </p>
                   <p className="mt-3 text-sm leading-7 text-muted">
-                    你可以把首页理解为一个公开可浏览、登录后可办理宗亲事务的门户，而不是一个只会讲故事或只会堆功能的页面。
+                    如果你是首次来访，先读文化再寻根；如果你已有线索，直接进入寻根与进度页即可。
                   </p>
                 </div>
               </div>
@@ -206,6 +241,34 @@ export function PortalHomePage() {
                   </Link>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5 sm:p-6">
+              <p className="eyebrow">动作后回流</p>
+              <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
+                每次完成动作后，至少回流一条可复用内容
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                把办事结果回流成公共记忆，下一位族人就能少走一段路，门户主线也会持续自我增强。
+              </p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                {returnFlowCards.map((card) => (
+                  <article key={card.title} className="subtle-card">
+                    <p className="eyebrow">{card.eyebrow}</p>
+                    <h4 className="mt-4 font-serif-cn text-[1.24rem] leading-tight text-ink">
+                      {card.title}
+                    </h4>
+                    <p className="mt-3 text-sm leading-7 text-muted">{card.summary}</p>
+                    <Link
+                      href={card.href}
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                    >
+                      {card.actionLabel}
+                      <span aria-hidden="true">↗</span>
+                    </Link>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
@@ -267,13 +330,13 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] lg:items-start">
               <div className="space-y-5">
                 <p className="ornament-line">家族主叙事</p>
-                <h2 className="section-title">文化内容后移，但不能消失</h2>
+                <h2 className="section-title">先读文化，再办事更容易走对路径</h2>
                 <p className="section-copy">
-                  家谱是连接，活动是组织，礼品是参与，但真正让这个站有身份感的仍然是家训、吴越与人物三条文化主线。它们构成门户的信任基础。
+                  家谱、活动和礼品都与现实行动相关；先用家训、吴越与人物内容建立认同，后续寻根和参与会更顺畅。
                 </p>
                 <div className="lead-quote">
                   <p className="font-serif-cn text-[1.38rem] leading-9 text-ink">
-                    钱氏网站不是“先做工具，文化以后再说”，而是“先有精神认同，再进入办事与连接”。
+                    花 10 分钟先理解家族精神，再进入寻根或活动，通常能减少中途犹豫和回跳。
                   </p>
                 </div>
                 <ButtonLink href="/heritage/" variant="secondary">
@@ -313,9 +376,9 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)]">
               <div className="space-y-5">
                 <p className="ornament-line">家谱中心</p>
-                <h2 className="section-title">把寻根、续谱、接谱收回一个入口中心</h2>
+                <h2 className="section-title">一个入口完成寻根、续谱、接谱</h2>
                 <p className="section-copy">
-                  顶层只保留一个“家谱中心”，不让“寻根、续谱、接谱”三个动作在导航层面彼此抢位。公开先讲用途与流程，登录后再真正办事。
+                  如果你要确认谱系归属，从家谱中心进入最省时间。先看清所需资料，再按寻根、续谱或接谱动作办理。
                 </p>
                 <div className="space-y-4">
                   {genealogyFacts.map((fact) => (
@@ -413,9 +476,9 @@ export function PortalHomePage() {
           <div className="soft-panel">
             <div className="space-y-4">
               <p className="ornament-line">文化传承</p>
-              <h2 className="section-title">把家风家训、吴越历史、人物与故事收回一个频道</h2>
+              <h2 className="section-title">先读精选内容，再进入文化频道深读</h2>
               <p className="section-copy">
-                文化传承是一个总频道，而不是多个平行顶层入口。首页只展示精选内容，正式阅读统一进入频道内部完成。
+                先从首页精选里挑一条最相关内容阅读，再进入文化频道继续深读，能更快建立与家族的真实连接感。
               </p>
             </div>
 
@@ -449,9 +512,9 @@ export function PortalHomePage() {
           <div className="soft-panel soft-panel-muted">
             <div className="space-y-4">
               <p className="ornament-line">宣传礼品</p>
-              <h2 className="section-title">礼品频道按文化意义与使用场景组织，而不是先堆商品</h2>
+              <h2 className="section-title">按使用场景选礼品，3 分钟完成初筛</h2>
               <p className="section-copy">
-                这里承接门户中的“参与行动”层。礼品既是纪念物，也是文化传播工具，所以页面要先讲用途和场景，再讲下单与订单。
+                先确定你是祭祖、家堂陈设还是宗亲赠礼场景，再选礼品会更快，也更容易选到真正能用的方案。
               </p>
             </div>
 
