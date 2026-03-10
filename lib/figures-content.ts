@@ -26,7 +26,7 @@ export type FiguresSourceLink = {
 export const figuresPageMeta = {
   title: "近代钱氏人物",
   description:
-    "从钱学森、钱三强、钱伟长等代表人物，理解钱氏精神如何在现代中国进入科学、教育与公共文化。",
+    "从三位代表人物，看钱氏精神如何进入现代中国。",
 } as const;
 
 export const figuresHeroFacts: FiguresHeroFact[] = [
@@ -41,7 +41,7 @@ export const figuresPersonBlocks: FiguresPersonBlock[] = [
     name: "钱学森",
     field: "航天与系统工程",
     summary:
-      "钱学森被广泛视作中国航天事业的重要奠基者之一。他所代表的，并不只是个人才智，而是把学问转化为国家长期能力建设的担当。",
+      "钱学森是中国航天事业的重要奠基者之一，代表的是把学问转成国家长期能力。",
     tags: ["回国报国", "航天事业", "国家能力建设"],
   },
   {
@@ -49,7 +49,7 @@ export const figuresPersonBlocks: FiguresPersonBlock[] = [
     name: "钱三强",
     field: "原子能科学事业",
     summary:
-      "中国科学院公开资料将钱三强称为我国原子能科学事业的创始人。他的重要性不仅在科研成就，也在学科组织与人才布局。",
+      "钱三强是我国原子能科学事业的创始人之一，重要性也在学科组织与人才布局。",
     tags: ["原子能", "科学组织", "人才培养"],
   },
   {
@@ -57,7 +57,7 @@ export const figuresPersonBlocks: FiguresPersonBlock[] = [
     name: "钱伟长",
     field: "力学、应用数学与教育",
     summary:
-      "钱伟长既是近代力学和应用数学的重要奠基者之一，也是教育实践者。他让“国家的需要就是我的专业”成为近代钱氏精神的鲜明表达。",
+      "钱伟长既治学也办学，“国家的需要就是我的专业”常被用来概括他。",
     tags: ["力学", "教育", "国家需要"],
   },
 ];
@@ -67,19 +67,19 @@ export const figuresValueBlocks: FiguresValueBlock[] = [
     id: "learning",
     title: "学问不是装饰",
     description:
-      "近代钱氏人物共同说明，读书治学并非只为一己功名，而要进入国家建设、社会服务与长期能力的积累。",
+      "读书治学不只为个人功名，更要进入国家建设与社会服务。",
   },
   {
     id: "discipline",
     title: "成就来自自持",
     description:
-      "无论是科研、办学还是公共事务，钱氏人物的共同底色都不是张扬，而是长期自律、守住原则、把事情做深做实。",
+      "他们长期自律、守住原则，也把事情做深做实。",
   },
   {
     id: "country",
     title: "家风最终落到家国",
     description:
-      "从家训到人物，真正贯穿其中的不是一时名望，而是把个人所学与家国责任放在同一尺度上理解。",
+      "共同点不在同姓，而在把个人所学和家国责任放在一起。",
   },
 ];
 

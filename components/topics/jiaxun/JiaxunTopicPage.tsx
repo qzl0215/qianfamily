@@ -37,7 +37,7 @@ export function JiaxunTopicPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)] lg:items-stretch">
             <div className="surface-card bg-[linear-gradient(145deg,rgba(251,248,242,0.96),rgba(232,221,209,0.68))]">
               <div className="max-w-4xl space-y-7">
-                <span className="hero-kicker">导读型正式专题页</span>
+                <span className="hero-kicker">文化专题</span>
                 <div className="space-y-5">
                   <p className="ornament-line">钱氏家训专题</p>
                   <h1 className="font-serif-cn text-[3rem] leading-[1.06] text-ink sm:text-[4rem] lg:text-[4.9rem]">
@@ -48,7 +48,7 @@ export function JiaxunTopicPage() {
                   从家训定义、四篇结构到族人案例，先把这条精神线读明白。
                 </p>
                 <p className="hero-summary">
-                  钱氏家训家教，是指五代时期以来，历代钱氏家族以家族训诫为基础，用以教育后世子孙的行为规范。这一页不做全文研读，而是先把它的精神结构、原句要义和现实落点讲清楚。
+                  先看三大价值、四篇结构和代表人物案例，理解钱氏家训如何影响做人、治家与家国判断。
                 </p>
                 <div className="flex flex-wrap gap-2.5 text-sm text-accent">
                   <span className="rounded-full border border-accent/10 bg-white/50 px-4 py-2">
@@ -66,10 +66,10 @@ export function JiaxunTopicPage() {
                     阅读提示
                   </p>
                   <p className="mt-3 font-serif-cn text-[1.28rem] leading-8 text-ink sm:text-[1.42rem]">
-                    这页不是原文全文，而是“原句 + 图片 + 族人案例”的导读页。
+                    建议先看原句与案例。
                   </p>
                   <p className="mt-3 text-[0.98rem] leading-8 text-muted">
-                    先理解这部家训是什么，再看它如何被概括为个人、家庭、社会、国家四个层次，最后通过跨时代的钱氏人物理解它如何进入真实历史与现代中国。
+                    再回到四篇结构和上海传承，就能抓住这页主线。
                   </p>
                 </div>
                 <div className="editorial-band grid gap-0 sm:grid-cols-3">
@@ -147,10 +147,10 @@ export function JiaxunTopicPage() {
                 </div>
                 <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
-                    页面定位
+                    阅读顺序
                   </p>
                   <p className="mt-3 text-sm leading-7 text-muted">
-                    这页服务于文化入口站的第一条主线，先建立对钱氏家训的基本认知，再导向后续的吴越历史与近代人物专题。
+                    先看原句与案例，再读四篇结构和上海传承。
                   </p>
                 </div>
               </div>
@@ -182,9 +182,9 @@ export function JiaxunTopicPage() {
           <div className="soft-panel soft-panel-muted">
             <div className="space-y-4">
               <p className="ornament-line">为什么重要</p>
-              <h2 className="section-title">三大价值，不止于一姓之家</h2>
+              <h2 className="section-title">三大价值，先抓这三个关键词</h2>
               <p className="section-copy">
-                官方介绍把钱氏家训家教的基本内容概括为“善事国家、重德修身、崇文尚学”。这三个关键词不是并列口号，而是从做人到治家的连续尺度。
+                先记住善事国家、重德修身、崇文尚学，再进入原句更容易。
               </p>
             </div>
 
@@ -207,13 +207,13 @@ export function JiaxunTopicPage() {
 
       <section className="page-section pt-2" id="formation">
         <Container>
-          <div className="space-y-4">
-            <p className="ornament-line">形成过程</p>
-            <h2 className="section-title">它不是一篇突然出现的文字</h2>
-            <p className="section-copy">
-              钱氏家训不是一次写成、从此不动的文本。它从钱镠遗训出发，经过历代支派增补、谱牒整理和现代采辑，才形成今天通行的导读形态。
-            </p>
-          </div>
+            <div className="space-y-4">
+              <p className="ornament-line">形成过程</p>
+              <h2 className="section-title">四个节点，看家训如何形成</h2>
+              <p className="section-copy">
+                从钱镠遗训到列入国家级非遗扩展项目，这四个节点足以看清来路。
+              </p>
+            </div>
 
           <div className="editorial-band mt-10 grid gap-0 sm:grid-cols-2 xl:grid-cols-4">
             {formationSteps.map((step, index) => (
@@ -238,11 +238,11 @@ export function JiaxunTopicPage() {
       <section className="page-section" id="structure">
         <Container>
           <div className="space-y-4">
-            <p className="ornament-line">四篇结构</p>
-            <h2 className="section-title">先读结构，再读原句</h2>
-            <p className="section-copy">
-              当下流传版本常被概括为个人、家庭、社会、国家四个篇章。先把结构看清，后面的原句与人物案例就更容易对上它真正关心的层次。
-            </p>
+              <p className="ornament-line">四篇结构</p>
+              <h2 className="section-title">先读结构，再读原句</h2>
+              <p className="section-copy">
+                先看四篇结构，再对照原句和人物案例。
+              </p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -281,18 +281,18 @@ export function JiaxunTopicPage() {
 
       <section className="page-section" id="cases">
         <Container>
-          <div className="space-y-4">
-            <p className="ornament-line">原句图解与族人案例</p>
-            <h2 className="section-title">让原句落到可以看见的人和事</h2>
-            <p className="section-copy">
-              这一部分不做堆叠式摘录，而是把原句、图片与族人案例放在一起。读者看到的不是孤立金句，而是一条从家训到历史与现实的连续精神线。
-            </p>
-            <div className="lead-quote max-w-4xl">
-              <p className="text-sm leading-7 text-muted">
-                版本说明：以下原句采用公开整理版本中的通行表述，用于导读和结构理解，不替代全文校勘或版本比对。
+            <div className="space-y-4">
+              <p className="ornament-line">原句图解与族人案例</p>
+              <h2 className="section-title">原句加案例，更容易读懂</h2>
+              <p className="section-copy">
+                每组都把原句和人物案例放在一起，方便直接理解要义。
               </p>
+              <div className="lead-quote max-w-4xl">
+                <p className="text-sm leading-7 text-muted">
+                  以下原句采用公开整理版本中的通行表述，用于导读。
+                </p>
+              </div>
             </div>
-          </div>
 
           <div className="mt-10 space-y-6">
             {quoteCaseBlocks.map((block, index) => {
@@ -377,9 +377,9 @@ export function JiaxunTopicPage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
               <div className="space-y-5">
                 <p className="ornament-line">上海传承</p>
-                <h2 className="section-title">这不是泛家训页，而是有上海抓手的专题页</h2>
+                <h2 className="section-title">上海传承，是这页最明确的现实落点</h2>
                 <p className="section-copy">
-                  钱氏家训家教已经被列为国家级非遗扩展项目，所属地区为上海市，保护单位为上海市地方史志学会。这个事实决定了它不仅是钱氏族人的内部文本，也是一项具有明确地方文化落点的公共文化遗产。
+                  国家级非遗扩展项目所属地区为上海市，保护单位为上海市地方史志学会。先看这个现实落点，再看今天如何传承。
                 </p>
                 <div className="grid gap-4 sm:grid-cols-3">
                   <div className="rounded-[1.55rem] border border-line/70 bg-white/[0.38] p-4">
@@ -469,7 +469,7 @@ export function JiaxunTopicPage() {
                 <h2 className="section-title">本页所依据的公开资料</h2>
                 <div className="lead-quote max-w-4xl">
                   <p className="text-sm leading-7 text-muted">
-                    资料说明：本页优先采用国家级非遗、地方政府、高校和科研机构公开资料，按导读页口径整合，不把专题页写成版本校勘或学术考据页。
+                    本页优先采用国家级非遗、地方政府、高校和科研机构公开资料。
                   </p>
                 </div>
                 <div className="grid gap-4 xl:grid-cols-2">
@@ -497,10 +497,10 @@ export function JiaxunTopicPage() {
                   下一步
                 </p>
                 <p className="mt-4 font-serif-cn text-[1.35rem] leading-8 text-ink">
-                  家训读完之后，继续进入吴越历史主线。
+                  读完家训，再去看吴越历史。
                 </p>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  钱氏家训解释了这条精神线是什么，而“钱王与吴越”专题会继续回答它如何在历史中形成、为何被今天反复记忆。
+                  想知道这些判断从哪里来，就继续看钱王与吴越。
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <ButtonLink href="/">返回首页</ButtonLink>

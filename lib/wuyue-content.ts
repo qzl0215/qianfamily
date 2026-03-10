@@ -24,7 +24,7 @@ export type WuyueSourceLink = {
 export const wuyuePageMeta = {
   title: "钱王与吴越",
   description:
-    "从钱镠崛起、吴越立国到 978 年纳土归宋，理解钱氏历史主线何以长期被概括为保境安民、治水兴邦与审时度势。",
+    "从钱镠崛起、吴越立国到纳土归宋，快速看清吴越历史主线。",
 } as const;
 
 export const wuyueHeroFacts: WuyueHeroFact[] = [
@@ -38,25 +38,25 @@ export const wuyueTimelineBlocks: WuyueTimelineBlock[] = [
     period: "晚唐五代",
     title: "乱世起身",
     description:
-      "钱镠起于动荡之世，逐步奠定两浙根基，成为吴越历史的开端人物。",
+      "钱镠起于晚唐五代动荡之中，逐步奠定两浙根基。",
   },
   {
     period: "吴越时期",
     title: "立国与治水",
     description:
-      "吴越并非只以偏安著称，更因重视农桑水利、修筑海塘、保境安民而留下稳定治理的形象。",
+      "吴越重视农桑水利、修筑海塘，也因此留下保境安民的形象。",
   },
   {
     period: "978 年",
     title: "纳土归宋",
     description:
-      "钱弘俶纳土归宋，后世常把这次抉择理解为审时度势与尽量避免江南再陷兵火。",
+      "978 年钱弘俶纳土归宋，后世常把这次抉择理解为尽量避免江南再陷兵火。",
   },
   {
     period: "宋以后",
     title: "千年回响",
     description:
-      "吴越记忆没有停在一朝一代，而是成为钱氏家训、地方文化与后世人物叙事的重要历史底板。",
+      "吴越记忆后来进入家训、地方文化与人物叙事。",
   },
 ];
 
@@ -65,19 +65,19 @@ export const wuyueJudgmentBlocks: WuyueJudgmentBlock[] = [
     id: "people",
     title: "保境安民",
     description:
-      "这段历史最常被后人记住的，不是扩张性的武功，而是尽可能保存江南民生与社会秩序的治理取向。",
+      "后人最常记住的，是尽量保住江南民生与社会秩序。",
   },
   {
     id: "water",
     title: "治水兴邦",
     description:
-      "从海塘到水利，吴越重视的是长久之利。它说明治理并不只在军事和权力，更在能否让百姓安居生产。",
+      "海塘与水利说明，治理不仅在兵事，也在能否让百姓安居生产。",
   },
   {
     id: "judgment",
     title: "审时度势",
     description:
-      "纳土归宋之所以被反复讨论，正在于它体现了一种把更大范围安定置于短期得失之前的历史判断。",
+      "纳土归宋常被视为把更大范围的安定放在短期得失之前。",
   },
 ];
 
