@@ -8,23 +8,23 @@ export default function GiftsCatalogPage() {
       <PageHero
         eyebrow="宣传礼品"
         title="礼品总览"
-        lead="在礼品频道中，目录页承接的是浏览与理解，不是立刻把用户推进下单。"
-        summary="这一页集中展示当前礼品方向和代表性条目，让用户先判断它们对应的文化意义、使用场景和纪念价值。后续会在登录后接入订单能力。"
-        chips={["目录浏览", "文化意义优先", "登录后下单"]}
+        lead="先浏览代表性礼品，再决定是否下单。"
+        summary="这里集中展示常用礼品及其适用场景，方便先比较再选择。"
+        chips={["礼品总览", "按需选择", "场景对照"]}
         facts={[
-          { label: "当前阶段", value: "总览与目录结构先行" },
-          { label: "浏览逻辑", value: "先看场景与意义，再看商品" },
-          { label: "后续能力", value: "订单、物流、个人记录" },
+          { label: "你会看到", value: "常用礼品、适用场景、主题方向" },
+          { label: "浏览建议", value: "先判断用途，再看具体礼品" },
+          { label: "下一步", value: "选定后进入礼品详情" },
         ]}
         primaryAction={{ href: "/gifts/", label: "返回礼品频道" }}
-        secondaryAction={{ href: "/gifts/orders/", label: "查看订单说明" }}
-        asideBody="礼品总览不会追求大而全，而是先建立一个有明确文化方向的目录页面。"
+        secondaryAction={{ href: "/gifts/orders/", label: "查看我的订单" }}
+        asideBody="先判断用途，再看具体礼品。"
       />
 
       <CardSection
         eyebrow="当前目录"
-        title="先把少量代表性礼品讲透"
-        description="频道第一阶段优先展示可代表家训、吴越与活动纪念三类方向的礼品，后续再逐步扩展。"
+        title="先看常用款"
+        description="从家训、吴越和活动纪念三类礼品开始挑选。"
         cards={giftHighlightCards}
         columns="3"
         muted

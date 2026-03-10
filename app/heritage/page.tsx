@@ -9,20 +9,20 @@ export default function HeritagePage() {
     <>
       <PageHero
         eyebrow="文化传承"
-        title="把钱氏家风家训、历史与人物收回一个总频道"
-        lead="文化传承回答的是认同问题，而不是办事问题。"
-        summary="这个频道吸纳家风家训、吴越历史、近代人物和族人故事四条内容线，作为宗亲门户的认知底板。它让族人在进入寻根、活动和礼品之前，先知道自己为何与这个家族相连。"
-        chips={["文化认同", "总频道", "公开浏览"]}
+        title="先了解家训、历史与人物，再进入寻根和活动"
+        lead="这里帮助第一次进入的族人先建立文化认同。"
+        summary="先读家风家训，再看吴越历史与钱氏人物；想看真实经历，就进入族人故事。"
+        chips={["文化认同", "家训历史人物", "公开浏览"]}
         facts={heritageOverviewFacts}
         primaryAction={{ href: "/heritage/jiafeng-jiaxun/", label: "先读家风家训" }}
         secondaryAction={{ href: "/heritage/wuyue/", label: "再看吴越历史" }}
-        asideBody="文化传承不再拆成多个顶层导航，而是以一个总频道承载家训、历史、人物和故事。"
+        asideBody="如果你刚到站，建议先从家训和吴越历史开始。"
       />
 
       <CardSection
         eyebrow="专题入口"
-        title="先用三条主线立住认知，再把真实故事补进来"
-        description="家风家训、吴越历史和近代人物是稳定的三条主线，族人故事则承接寻根、活动和现实参与后的内容回流。"
+        title="先读这四类内容"
+        description="先看家训，再看历史与人物；想看真实经历，就进入族人故事。"
         cards={cultureHighlightCards}
         columns="4"
         muted
@@ -30,63 +30,11 @@ export default function HeritagePage() {
 
       <CardSection
         eyebrow="内容回流"
-        title="让族人故事成为持续更新的公共内容"
-        description="故事栏目既承接文化频道，也与家谱中心和活动系统联动。它让网站不只是读资料，而是持续沉淀现实参与后的真实经验。"
+        title="从真实经历看家族如何延续"
+        description="这里集中收录迁徙、寻根和参与活动后的真实故事。"
         cards={storyCards}
         columns="3"
       />
-
-      <section className="page-section pt-4">
-        <Container>
-          <div className="surface-card">
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.74fr)_minmax(0,1fr)] lg:items-start">
-              <div className="space-y-5">
-                <p className="ornament-line">30 秒导读</p>
-                <h2 className="section-title">先读三条主线，再进入归属与参与</h2>
-                <p className="section-copy">
-                  文化传承不是独立终点，而是全站主线的起点。先看家训建立价值认同，再用历史与人物确认家族脉络，最后进入寻根和活动完成现实连接。
-                </p>
-                <div className="flex flex-wrap gap-4 pt-1">
-                  <ButtonLink href="/genealogy/find-roots/">认同后去寻根</ButtonLink>
-                  <ButtonLink href="/events/upcoming/" variant="secondary">
-                    认同后去看活动
-                  </ButtonLink>
-                </div>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-3">
-                <article className="subtle-card">
-                  <p className="eyebrow">1 / 价值底板</p>
-                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
-                    家训先回答“为何相连”
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    从善事国家、重德修身到崇文尚学，先建立家族共同价值。
-                  </p>
-                </article>
-                <article className="subtle-card">
-                  <p className="eyebrow">2 / 历史脉络</p>
-                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
-                    吴越与人物回答“从何而来”
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    把历史与近现代人物放在同一脉络里，形成完整认知。
-                  </p>
-                </article>
-                <article className="subtle-card">
-                  <p className="eyebrow">3 / 现实行动</p>
-                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
-                    回到寻根与活动完成连接
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    文化认同最终应转成谱系归属与宗亲参与，而不是停留在阅读。
-                  </p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       <section className="page-section pt-4">
         <Container>
@@ -94,9 +42,9 @@ export default function HeritagePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] lg:items-start">
               <div className="space-y-5">
                 <p className="ornament-line">读完后立刻执行</p>
-                <h2 className="section-title">把文化阅读转成 3 分钟可完成的寻根启动动作</h2>
+                <h2 className="section-title">读完后，先做一个寻根动作</h2>
                 <p className="section-copy">
-                  读完家训、历史与人物后，不建议停留在“我理解了”。先完成一个最小寻根动作，可让文化认同立刻进入谱系归属阶段。
+                  先记下一位可回访长辈，补齐祖籍范围，再带着三条线索进入寻根。
                 </p>
                 <div className="flex flex-wrap gap-4 pt-1">
                   <ButtonLink href="/genealogy/find-roots/">现在去做寻根首步</ButtonLink>

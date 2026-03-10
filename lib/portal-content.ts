@@ -360,7 +360,7 @@ export const giftHighlightCards: PortalCard[] = [
 export const announcementCards: PortalCard[] = [
   {
     eyebrow: "宗亲动态",
-    title: "家谱中心上线第一阶段办事入口",
+    title: "家谱中心已整合寻根、续谱与进度查看",
     href: "/genealogy/",
     summary: "寻根、续谱、接谱与状态查询统一收入口中心，首次来站可按步骤进入对应动作。",
     meta: "站点更新",
@@ -376,18 +376,18 @@ export const announcementCards: PortalCard[] = [
   },
   {
     eyebrow: "活动公告",
-    title: "春祭告祖礼进入筹备与报名说明阶段",
+    title: "春祭告祖礼开放时间与流程说明",
     href: "/events/upcoming/",
     summary: "活动页统一承载时间、地点、流程与报名说明，减少信息分散带来的沟通成本。",
     meta: "活动预告",
     actionLabel: "查看报名说明",
   },
   {
-    eyebrow: "礼品计划",
-    title: "宣传礼品频道开始按场景组织内容",
+    eyebrow: "宣传礼品",
+    title: "宣传礼品已按使用场景整理",
     href: "/gifts/occasions/",
     summary: "礼品先按祭祖、赠礼与阅读场景组织，再进入商品详情与订单能力。",
-    meta: "频道规划",
+    meta: "内容更新",
     actionLabel: "进入礼品场景",
   },
 ];
@@ -412,10 +412,10 @@ export const accessRoles: PortalRole[] = [
 
 export const heritageOverviewFacts: PortalFact[] = [
   { label: "主线环节", value: "文化认同" },
-  { label: "总定位", value: "文化认同入口" },
-  { label: "下一步", value: "进入家谱中心确认谱系归属" },
-  { label: "四个栏目", value: "家风家训、吴越历史、近代人物、族人故事" },
-  { label: "核心目标", value: "先认同，再进入谱系与组织连接" },
+  { label: "内容范围", value: "家风家训、吴越历史、近代人物、族人故事" },
+  { label: "适合谁", value: "第一次了解钱氏文化的族人" },
+  { label: "阅读建议", value: "先家训，再历史与人物" },
+  { label: "下一步", value: "了解后进入寻根或活动" },
 ];
 
 export const heritageOverviewSections = [
@@ -423,7 +423,7 @@ export const heritageOverviewSections = [
     eyebrow: "专题入口",
     title: "从三条主线进入文化认同",
     description:
-      "文化传承不是办事中心，而是宗亲门户的认知底板。它回答“我们是谁、从哪里来、为何值得继续传承”。",
+      "先读家训，再看历史与人物，最后进入族人故事理解家族如何延续。",
     cards: cultureHighlightCards,
   },
 ] as const;
@@ -434,33 +434,33 @@ export const storyCards: PortalCard[] = [
     title: "迁徙与落脚",
     href: "/heritage/stories/",
     summary: "记录支派从吴越故地走向江南、华东乃至海外的迁徙路径与生活转折。",
-    meta: "筹备中",
-    actionLabel: "查看栏目说明",
+    meta: "迁徙记忆",
+    actionLabel: "查看故事",
   },
   {
     eyebrow: "族人故事",
     title: "寻根经历",
     href: "/genealogy/find-roots/",
     summary: "把族人如何从口述、墓志、地方志和旧谱中重新确认谱系线索的过程沉淀为经验。",
-    meta: "与家谱中心联动",
-    actionLabel: "了解寻根方式",
+    meta: "寻根经验",
+    actionLabel: "查看寻根入口",
   },
   {
     eyebrow: "族人故事",
     title: "当代参与",
     href: "/events/upcoming/",
     summary: "把祭祖、读书、宗亲联谊和志愿协作中的真实参与回流为新的公共内容。",
-    meta: "与活动系统联动",
+    meta: "活动参与",
     actionLabel: "查看活动入口",
   },
 ];
 
 export const eventsOverviewFacts: PortalFact[] = [
   { label: "主线环节", value: "宗亲连接" },
-  { label: "频道定位", value: "宗亲连接入口" },
-  { label: "下一步", value: "进入礼品场景与参与行动" },
-  { label: "公开可看", value: "活动详情、时间、地点、历史回顾" },
-  { label: "登录可办", value: "报名、签到、通知接收、个人记录" },
+  { label: "你会看到", value: "近期活动、年度安排、历届回顾" },
+  { label: "适合谁", value: "准备参加活动的族人" },
+  { label: "常用入口", value: "近期活动、年度活动表、历届回顾" },
+  { label: "下一步", value: "选定活动后再报名" },
 ];
 
 export const eventCalendarCards: PortalCard[] = [
@@ -496,25 +496,25 @@ export const eventHistoryCards: PortalCard[] = [
     title: "告祖礼与宗祠纪念",
     href: "/events/history/",
     summary: "保留历届祭祖活动的照片、流程、地点与组织节点，形成清晰的公共记忆。",
-    meta: "持续沉淀中",
-    actionLabel: "查看回顾说明",
+    meta: "照片与流程",
+    actionLabel: "查看回顾",
   },
   {
     eyebrow: "历届回顾",
     title: "宗亲大会与支派联络",
     href: "/events/history/",
     summary: "记录不同地区宗亲如何通过会议、寻访和协作整理谱牒与活动线索。",
-    meta: "持续沉淀中",
-    actionLabel: "查看回顾说明",
+    meta: "联络与协作",
+    actionLabel: "查看回顾",
   },
 ];
 
 export const giftsOverviewFacts: PortalFact[] = [
   { label: "主线环节", value: "参与行动" },
-  { label: "频道定位", value: "文化商品与纪念传播入口" },
-  { label: "下一步", value: "活动与故事回流为公共内容" },
-  { label: "展示逻辑", value: "先讲文化意义，再讲商品用途" },
-  { label: "后续能力", value: "登录下单、订单跟踪、活动定制" },
+  { label: "适用场景", value: "祭祖、陈设、赠礼、传播" },
+  { label: "选择方式", value: "先看场景，再看礼品" },
+  { label: "常用入口", value: "礼品总览、场景说明" },
+  { label: "下一步", value: "确定用途后进入礼品详情" },
 ];
 
 export const giftOccasionCards: PortalCard[] = [
@@ -530,7 +530,7 @@ export const giftOccasionCards: PortalCard[] = [
     eyebrow: "使用场景",
     title: "家堂与书房陈设",
     href: "/gifts/jiaxun-scroll/",
-    summary: "适合把家训、人物故事与家风陈设结合到日常空间，而不是停留在一次性纪念。",
+    summary: "适合把家训、人物故事与家风陈设结合到日常空间。",
     meta: "家庭场景",
     actionLabel: "查看礼品详情",
   },
@@ -567,7 +567,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
     },
     {
       title: "登录后提交线索",
-      description: "提交基础信息、附件与补充说明，系统会进入资料核对、支派比对和反馈阶段。",
+      description: "提交基础信息、附件与补充说明，便于后续核对支派与世系线索。",
     },
   ],
   checklist: [
@@ -583,7 +583,7 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
     },
     {
       question: "寻根一定能马上匹配到支派吗？",
-      answer: "不一定。很多线索需要与旧谱、支派资料和地方文献交叉核对，所以系统会保留补充说明和后续反馈。",
+      answer: "不一定。很多线索仍需与旧谱、支派资料和地方文献交叉核对，补充得越具体，确认越快。",
     },
     {
       question: "为什么先看说明再提交？",
@@ -592,13 +592,13 @@ export const genealogyFindRootsContent: WorkflowPageContent = {
   ],
   primaryAction: { label: "进入家谱中心总览", href: "/genealogy/" },
   secondaryAction: { label: "查看提交进度说明", href: "/genealogy/status/" },
-  note: "当前站点先提供清晰的说明骨架。正式版本会在这里接入登录、提交与审核流程。",
+  note: "提交前先把祖籍范围、辈分称谓和可联系长辈写清。",
 };
 
 export const genealogyContinueContent: WorkflowPageContent = {
   eyebrow: "家谱中心",
   title: "家谱续谱",
-  lead: "续谱不是补一个名字，而是让支派、代际和迁徙信息持续不断裂。",
+  lead: "把新增成员、迁居和重要资料按支派继续补全。",
   summary:
     "这个页面面向已经确认支派或掌握较完整家族信息的族人，目标是把新增世系、婚配、迁移和人物资料规范地补入系统。",
   chips: ["登录后提交", "支派协作", "资料审核"],
@@ -637,19 +637,19 @@ export const genealogyContinueContent: WorkflowPageContent = {
       answer: "可以先整理草稿，但正式提交时仍建议至少附上基础说明和能支持判断的材料。",
     },
     {
-      question: "系统会保留修改记录吗？",
-      answer: "规划中会保留提交记录、审核意见和版本变化，方便长期维护和接续。",
+      question: "续谱后如何继续补充？",
+      answer: "建议持续按同一支派整理新增成员、迁居信息和佐证材料，便于后续校对。",
     },
   ],
   primaryAction: { label: "返回家谱中心", href: "/genealogy/" },
   secondaryAction: { label: "了解我接家谱", href: "/genealogy/takeover/" },
-  note: "续谱页会逐步扩展为可登录提交、可审核追踪的工作台。当前先把逻辑、流程和内容结构稳定下来。",
+  note: "先按统一格式整理成员关系、关键年份和佐证材料。",
 };
 
 export const genealogyTakeoverContent: WorkflowPageContent = {
   eyebrow: "家谱中心",
   title: "我接家谱",
-  lead: "接谱不是一次认领，而是持续承担联络、整理、校对和更新的责任。",
+  lead: "接手支派维护后，需要持续联络、整理和校对资料。",
   summary:
     "这个页面用于说明支派维护者如何接手谱牒工作，以及接手之后需要承担哪些长期职责和协作关系。",
   chips: ["长期维护", "支派协作", "责任明确"],
@@ -669,7 +669,7 @@ export const genealogyTakeoverContent: WorkflowPageContent = {
     },
     {
       title: "进入协同维护",
-      description: "后续会与管理员、其他支派联系人协同推进续谱、校对与资料沉淀。",
+      description: "与其他支派联系人协同推进续谱、校对与资料沉淀。",
     },
   ],
   checklist: [
@@ -688,13 +688,13 @@ export const genealogyTakeoverContent: WorkflowPageContent = {
       answer: "可以，但需要明确你掌握的范围和缺口，接谱本身也会推动资料再搜集与联络。",
     },
     {
-      question: "后续会有协作工具吗？",
-      answer: "规划中会增加进度追踪、任务备注和资料回访能力，支持长期维护。",
+      question: "接谱后先做什么？",
+      answer: "先列出现有旧谱、可联系长辈和缺失支线，再逐项补齐。",
     },
   ],
   primaryAction: { label: "返回家谱中心", href: "/genealogy/" },
   secondaryAction: { label: "查看续谱说明", href: "/genealogy/continue/" },
-  note: "接谱页会成为未来家谱工作台的重要入口。当前先把责任边界、工作方式和协作关系说清楚。",
+  note: "先确认你掌握的资料范围，再决定接手的支派部分。",
 };
 
 export const genealogyStatusContent: WorkflowPageContent = {
@@ -702,12 +702,12 @@ export const genealogyStatusContent: WorkflowPageContent = {
   title: "我的提交 / 进度",
   lead: "所有寻根、续谱和接谱动作，都应该有明确的状态回执和补充说明入口。",
   summary:
-    "这不是单独的资讯页，而是未来登录后查看个人记录的工作台。当前先把会看到哪些状态、如何理解这些状态讲清楚。",
+    "这里集中说明提交后会看到的状态，以及需要补充材料时该怎么处理。",
   chips: ["个人记录", "进度回执", "补充说明"],
   facts: [
     { label: "查看对象", value: "寻根、续谱、接谱、活动报名、礼品订单" },
     { label: "状态类型", value: "待处理、需补充、审核中、已完成" },
-    { label: "后续能力", value: "消息通知、补件、历史记录" },
+    { label: "常见动作", value: "看结果、补材料、回看记录" },
   ],
   steps: [
     {
@@ -716,11 +716,11 @@ export const genealogyStatusContent: WorkflowPageContent = {
     },
     {
       title: "根据反馈补充材料",
-      description: "如果系统或管理员发出补充说明，会明确缺失点，避免反复沟通却没有结果。",
+      description: "如果收到补充要求，会明确缺失点，按项补齐即可。",
     },
     {
       title: "保留历史记录",
-      description: "后续会保留你的提交记录、处理意见与最终结果，便于长期回看与复用。",
+      description: "保留提交时间、处理结果和补充记录，便于后续回看。",
     },
   ],
   checklist: [
@@ -731,21 +731,21 @@ export const genealogyStatusContent: WorkflowPageContent = {
   ],
   faq: [
     {
-      question: "为什么把活动和订单也放进这里？",
-      answer: "因为宗亲门户不是单一内容站。家谱、活动和礼品都属于同一位族人的个人参与记录。",
+      question: "这里能看哪些记录？",
+      answer: "寻根、续谱、接谱，以及后续的活动和礼品记录都会汇总在同一处。",
     },
     {
-      question: "状态页什么时候会真正上线？",
-      answer: "当前先完成信息架构和说明。后续接入登录后，这里会变成个人中心的重要组成部分。",
+      question: "看到“需补充”该做什么？",
+      answer: "按提示补齐祖籍、辈分、时间或佐证材料，再重新提交即可。",
     },
     {
-      question: "能否收到处理提醒？",
-      answer: "规划中会增加站内提醒和消息通知，避免提交后长期无反馈。",
+      question: "处理完成后看什么？",
+      answer: "重点查看结果说明、补充意见和下一步建议动作。",
     },
   ],
   primaryAction: { label: "返回家谱中心", href: "/genealogy/" },
   secondaryAction: { label: "进入寻根说明", href: "/genealogy/find-roots/" },
-  note: "状态页的存在，是为了把“已提交”真正变成“可追踪、可反馈、可回看”的体验。",
+  note: "提交后先保留联系方式，便于回访和补充说明。",
 };
 
 export const eventDetails: DetailPageContent[] = [
@@ -755,7 +755,7 @@ export const eventDetails: DetailPageContent[] = [
     title: "春祭告祖礼",
     lead: "以祭祖、敬香、诵读家训和支派见面为主的年度公共活动。",
     summary:
-      "这类活动既是礼仪现场，也是宗亲连接与文化回流的入口。页面会公开呈现时间、地点、流程和参加说明，报名与签到则保留到登录后处理。",
+      "这页提供时间、地点、流程和参加说明，便于先判断是否适合参与。",
     chips: ["报名中", "临安", "年度重点活动"],
     facts: [
       { label: "时间", value: "2026年4月5日" },
@@ -769,7 +769,7 @@ export const eventDetails: DetailPageContent[] = [
       },
       {
         title: "页面作用",
-        description: "统一承载活动说明、报名须知、签到安排和回顾资料，避免信息散落。",
+        description: "集中给出活动说明、参加须知和现场安排。",
       },
       {
         title: "内容回流",
@@ -788,12 +788,12 @@ export const eventDetails: DetailPageContent[] = [
       },
       {
         question: "报名后如何查看状态？",
-        answer: "后续会在“我的报名 / 进度”中统一查看活动报名和签到状态。",
+        answer: "报名后可回到“我的活动”查看确认与提醒信息。",
       },
     ],
     primaryAction: { label: "查看近期活动", href: "/events/upcoming/" },
     secondaryAction: { label: "返回活动频道", href: "/events/" },
-    note: "当前先完成公开活动详情与结构设计，后续再接入真正的报名与签到能力。",
+    note: "报名前先确认时间、同行成员和联系方式。",
   },
   {
     slug: "jiangnan-clan-meeting",
@@ -801,8 +801,8 @@ export const eventDetails: DetailPageContent[] = [
     title: "江南宗亲代表会",
     lead: "围绕地区联络、谱牒整理与青年参与展开的代表性宗亲交流活动。",
     summary:
-      "这类活动不只为见面，更承担资源连接、资料对接和后续协作的功能。页面需要兼顾说明、报名和回顾三种用途。",
-    chips: ["宗亲联络", "上海", "筹备中"],
+      "适合想了解地区联络、谱牒整理与青年参与安排的族人。",
+    chips: ["宗亲联络", "上海", "公开说明"],
     facts: [
       { label: "时间", value: "2026年5月16日" },
       { label: "地点", value: "上海青浦" },
@@ -811,7 +811,7 @@ export const eventDetails: DetailPageContent[] = [
     highlights: [
       {
         title: "地区联络",
-        description: "让不同地区支派不再只是松散联系，而是通过活动把后续协作接上。",
+        description: "通过见面确认地区联系人、后续分工和青年参与方式。",
       },
       {
         title: "资料协作",
@@ -839,7 +839,7 @@ export const eventDetails: DetailPageContent[] = [
     ],
     primaryAction: { label: "查看近期活动", href: "/events/upcoming/" },
     secondaryAction: { label: "返回活动频道", href: "/events/" },
-    note: "代表会类页面会逐步扩展为“会前说明 + 会中协同 + 会后回顾”的完整结构。",
+    note: "先看议程与参加对象，再决定是否报名。",
   },
 ];
 
@@ -850,7 +850,7 @@ export const giftDetails: DetailPageContent[] = [
     title: "钱氏家训卷轴",
     lead: "把家训核心句转化为可陈设、可赠送、可长期观看的文化物件。",
     summary:
-      "礼品频道不做单纯堆货页。每个礼品都要先说明它承载的文化意义、使用场景和传播方式，再进入购买逻辑。",
+      "适合用于家堂、书房、宗祠陈设或家族赠礼，先看内容和场景再选择规格。",
     chips: ["家训", "陈设", "赠礼"],
     facts: [
       { label: "适用场景", value: "家堂、书房、宗祠、赠礼" },
@@ -878,17 +878,17 @@ export const giftDetails: DetailPageContent[] = [
     ],
     faq: [
       {
-        question: "为什么礼品也放在门户站里？",
-        answer: "因为礼品是文化传播和参与行动的一部分，不是独立于宗亲门户之外的纯电商行为。",
+        question: "这款礼品适合什么场景？",
+        answer: "适合家堂、书房、宗祠陈设，也适合作为家族赠礼。",
       },
       {
-        question: "礼品页会只有商品参数吗？",
-        answer: "不会。礼品页首先讲文化意义和使用场景，然后才是规格和下单入口。",
+        question: "选购前先看什么？",
+        answer: "先确认陈设空间、赠礼对象和想表达的家训主题。",
       },
     ],
     primaryAction: { label: "查看礼品总览", href: "/gifts/catalog/" },
     secondaryAction: { label: "返回礼品频道", href: "/gifts/" },
-    note: "当前先完成礼品信息架构和展示逻辑，后续再接入正式订单能力。",
+    note: "先确认陈设空间或赠礼对象，再选择规格。",
   },
   {
     slug: "wuyue-heritage-set",
@@ -896,12 +896,12 @@ export const giftDetails: DetailPageContent[] = [
     title: "吴越记忆礼盒",
     lead: "围绕钱王、吴越和长三角文化记忆设计的活动纪念礼。",
     summary:
-      "这类礼品更适合活动伴手礼、宗亲联谊和纪念传播场景。页面需要同时讲清历史主题、设计方向和用途边界。",
+      "适合活动纪念、宗亲联谊和伴手礼场景，先看主题再判断用途。",
     chips: ["吴越", "纪念", "活动伴手礼"],
     facts: [
       { label: "适用场景", value: "祭祖、联谊、会务纪念" },
       { label: "内容主题", value: "钱王、吴越、长三角记忆" },
-      { label: "后续能力", value: "公开展示，登录后下单或团体定制" },
+      { label: "使用方式", value: "先公开浏览，再按需求下单或定制" },
     ],
     highlights: [
       {
@@ -924,31 +924,31 @@ export const giftDetails: DetailPageContent[] = [
     ],
     faq: [
       {
-        question: "为什么礼品页要讲这么多背景？",
-        answer: "因为这里卖的不只是商品，更是与家训、吴越、人物等主题相关的文化意义。",
+        question: "这款礼盒适合送给谁？",
+        answer: "适合活动嘉宾、宗亲来访和家族纪念场景。",
       },
       {
-        question: "能否作为活动定制礼？",
-        answer: "规划中会支持团体采购和活动定制，所以页面会预留场景与用途说明。",
+        question: "团体使用时先准备什么？",
+        answer: "先确定人数、活动主题和交付时间，再评估是否适合统一使用。",
       },
     ],
     primaryAction: { label: "查看礼品总览", href: "/gifts/catalog/" },
     secondaryAction: { label: "返回礼品频道", href: "/gifts/" },
-    note: "礼品频道后续会把活动需求、团体采购和订单跟踪统一纳入一个频道逻辑中。",
+    note: "先确认活动主题、人数和使用场合。",
   },
 ];
 
 export const eventsMyContent: WorkflowPageContent = {
   eyebrow: "祭祖活动",
   title: "我的报名 / 签到 / 通知",
-  lead: "活动频道最终要回到个人视角，让每一次报名、签到和通知都有可追踪的状态。",
+  lead: "这里集中查看报名、签到和通知状态。",
   summary:
-    "这里会是未来登录后查看活动记录的工作台。当前先把结构说清：你能看到哪些记录、收到哪些通知、如何理解状态变化。",
+    "已报名后，先在这里查看状态、通知和历史记录。",
   chips: ["个人记录", "活动状态", "登录后查看"],
   facts: [
     { label: "可查看内容", value: "报名状态、签到结果、会务通知、历史活动" },
-    { label: "当前定位", value: "活动个人工作台说明页" },
-    { label: "后续能力", value: "消息提醒、签到码、回顾下载" },
+    { label: "最常用", value: "查看确认、签到提醒和会务变更" },
+    { label: "下一步", value: "按通知完成签到或到场准备" },
   ],
   steps: [
     {
@@ -957,7 +957,7 @@ export const eventsMyContent: WorkflowPageContent = {
     },
     {
       title: "接收活动通知",
-      description: "后续可查看时间提醒、地点调整、签到说明和现场流程更新。",
+      description: "查看时间提醒、地点调整、签到说明和现场流程更新。",
     },
     {
       title: "保留历史记录",
@@ -972,8 +972,8 @@ export const eventsMyContent: WorkflowPageContent = {
   ],
   faq: [
     {
-      question: "为什么活动也要做个人工作台？",
-      answer: "因为活动不是一次阅读行为，而是宗亲门户中的真实参与行为，需要有状态、通知和历史记录。",
+      question: "这里会显示哪些信息？",
+      answer: "会集中显示报名状态、签到结果、通知更新和历史活动。",
     },
     {
       question: "未登录可以看到这里吗？",
@@ -982,20 +982,20 @@ export const eventsMyContent: WorkflowPageContent = {
   ],
   primaryAction: { label: "查看近期活动", href: "/events/upcoming/" },
   secondaryAction: { label: "返回活动频道", href: "/events/" },
-  note: "活动工作台会在后续版本承担报名、签到、通知和历史回顾的个人入口职责。",
+  note: "报名后记得留意状态变更和时间提醒。",
 };
 
 export const giftOrdersContent: WorkflowPageContent = {
   eyebrow: "宣传礼品",
   title: "我的订单",
-  lead: "礼品频道最终要有完整的订单、收货和后续服务记录，而不是只有一个下单按钮。",
+  lead: "这里集中查看礼品订单、收货信息和物流状态。",
   summary:
-    "当前先把订单页的角色说清楚：查看已购礼品、跟踪订单状态、处理收货信息，并让活动礼品和家庭礼品都能纳入同一套记录。",
+    "下单后，先在这里看订单进度，再处理收货信息和备注。",
   chips: ["订单跟踪", "登录后查看", "文化商品"],
   facts: [
     { label: "可查看内容", value: "订单状态、收货信息、物流与售后说明" },
-    { label: "当前定位", value: "礼品个人工作台说明页" },
-    { label: "后续能力", value: "下单、支付、物流和历史订单记录" },
+    { label: "最常用", value: "查看发货进度和收货备注" },
+    { label: "下一步", value: "确认地址与物流状态" },
   ],
   steps: [
     {
@@ -1004,11 +1004,11 @@ export const giftOrdersContent: WorkflowPageContent = {
     },
     {
       title: "管理收货信息",
-      description: "后续会统一处理个人地址、活动团体地址和礼品用途备注。",
+      description: "统一处理个人地址、活动团体地址和礼品用途备注。",
     },
     {
       title: "保留文化购买记录",
-      description: "让礼品行为也成为门户中的参与记录，而不是与文化和活动断开的独立订单。",
+      description: "保留礼品购买记录，方便后续回看活动用途和历史订单。",
     },
   ],
   checklist: [
@@ -1019,15 +1019,15 @@ export const giftOrdersContent: WorkflowPageContent = {
   ],
   faq: [
     {
-      question: "为什么礼品订单也要放进宗亲门户？",
-      answer: "因为礼品不是纯电商，它与活动、纪念和传播场景有关，应与族人的其他参与记录放在一起。",
+      question: "这里能看什么？",
+      answer: "可以查看订单状态、物流信息、收货地址和用途备注。",
     },
     {
       question: "当前能直接下单吗？",
-      answer: "目前先完成信息架构和展示逻辑，正式订单能力会在后续版本接入。",
+      answer: "当前页面主要用于查看订单进度和收货信息。",
     },
   ],
   primaryAction: { label: "查看礼品总览", href: "/gifts/catalog/" },
   secondaryAction: { label: "返回礼品频道", href: "/gifts/" },
-  note: "订单页会在后续版本中接入正式下单与物流能力。当前先把频道定位、结构和用户预期立住。",
+  note: "下单后留意收货地址、物流和备注是否正确。",
 };
