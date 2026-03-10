@@ -19,7 +19,7 @@ import {
 export function PortalHomePage() {
   const latestUpdates = announcementCards.slice(0, 3);
   const weeklyFocus = {
-    title: "本周推荐先做一步",
+    title: "本周推荐",
     summary: "第一次来站，先读 10 分钟文化内容，再去寻根。",
     checklist: [
       "先读 1 篇家训或人物内容。",
@@ -45,9 +45,6 @@ export function PortalHomePage() {
                 <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
                   先寻根续谱，再连接宗亲、文化与行动
                 </h1>
-                <p className="hero-deck">
-                  先按当前状态选入口，再按提示往下一步走。
-                </p>
 
                 <div className="editorial-band grid gap-0 sm:grid-cols-5">
                   {portalLogicSteps.map((step, index) => (
@@ -170,13 +167,7 @@ export function PortalHomePage() {
           <div className="soft-panel">
             <div className="space-y-4">
               <p className="ornament-line">我现在该做什么</p>
-              <h2 className="section-title">按当前状态进入，不必从头浏览全部频道</h2>
-              <p className="section-copy">
-                不确定从哪开始，就先按当前状态选一张卡。
-              </p>
-              <p className="text-sm leading-7 text-accent">
-                拿不准时，先选“我是第一次来站”。
-              </p>
+              <h2 className="section-title">按当前状态选择入口</h2>
             </div>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {homeDecisionCards.map((card) => (
@@ -208,15 +199,7 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] lg:items-start">
               <div className="space-y-5">
                 <p className="ornament-line">家族主叙事</p>
-                <h2 className="section-title">先读文化，再办事更容易走对路径</h2>
-                <p className="section-copy">
-                  先读家训、吴越或人物，再去寻根或活动。
-                </p>
-                <div className="lead-quote">
-                  <p className="font-serif-cn text-[1.38rem] leading-9 text-ink">
-                    先读 10 分钟文化内容，再去寻根或活动。
-                  </p>
-                </div>
+                <h2 className="section-title">家训、吴越与人物</h2>
                 <ButtonLink href="/heritage/" variant="secondary">
                   进入文化传承
                 </ButtonLink>
@@ -254,10 +237,7 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)]">
               <div className="space-y-5">
                 <p className="ornament-line">家谱中心</p>
-                <h2 className="section-title">一个入口完成寻根、续谱、接谱</h2>
-                <p className="section-copy">
-                  要确认谱系归属，就从家谱中心进入。先看准备项，再选寻根、续谱或接谱。
-                </p>
+                <h2 className="section-title">寻根、续谱、接谱</h2>
                 <div className="space-y-4">
                   {genealogyFacts.map((fact) => (
                     <div
@@ -306,10 +286,7 @@ export function PortalHomePage() {
           <div className="soft-panel soft-panel-muted">
             <div className="space-y-4">
               <p className="ornament-line">祭祖活动</p>
-              <h2 className="section-title">从公开活动页进入现实中的宗亲连接</h2>
-              <p className="section-copy">
-                先看时间、地点和流程，确认合适后再登录报名。
-              </p>
+              <h2 className="section-title">近期祭祖与宗亲活动</h2>
             </div>
 
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -354,10 +331,7 @@ export function PortalHomePage() {
           <div className="soft-panel">
             <div className="space-y-4">
               <p className="ornament-line">文化传承</p>
-              <h2 className="section-title">先读精选内容，再进入文化频道深读</h2>
-              <p className="section-copy">
-                先挑一条最相关内容读，再去文化频道继续看。
-              </p>
+              <h2 className="section-title">家训、吴越与族人故事</h2>
             </div>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -390,10 +364,7 @@ export function PortalHomePage() {
           <div className="soft-panel soft-panel-muted">
             <div className="space-y-4">
               <p className="ornament-line">宣传礼品</p>
-              <h2 className="section-title">按使用场景选礼品，3 分钟完成初筛</h2>
-              <p className="section-copy">
-                先定场景，再选礼品。
-              </p>
+              <h2 className="section-title">祭祖、陈设与赠礼</h2>
             </div>
 
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -439,7 +410,7 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
               <div className="space-y-5">
                 <p className="ornament-line">宗亲动态 / 公告</p>
-                <h2 className="section-title">最近更新与可直接进入的入口</h2>
+                <h2 className="section-title">最近更新</h2>
                 <div className="space-y-4">
                   {announcementCards.map((card) => (
                     <article

@@ -7,7 +7,7 @@ Last updated: 2026-03-11 01:44:15 CST
 - URL: https://qianfamily.online/
 - Branch: `main`
 - Commit: `本轮发布提交`
-- Scope: Iteration 19 首页正文内容减法，删除解释型段落并收紧 section-copy。
+- Scope: Iteration 20 首页标题与正文继续减法，删除说明型标题与段落。
 - Evidence: 以本轮 `npm run build` 通过为发布前验证基线。
 
 ## Notes
