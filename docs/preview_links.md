@@ -1,15 +1,24 @@
 # Preview Links
 
-Last updated: 2026-03-10 11:28:12 CST
+Last updated: 2026-03-10 16:03:00 CST
 
 ## Latest
 - Status: 可访问（本地静态预览可访问）。
 - URL: http://127.0.0.1:4173
-- Branch: `detached HEAD`（来源于 `feat/qianfamily-evolution` 工作树快照）
-- Commit: `未提交（Iteration 10 工作区）`
-- Scope: Iteration 10 首页增强（推荐清单+二跳入口、差异化 CTA、默认起步提示）。
+- Branch: `codex/40af/evolution-11`
+- Commit: `未提交（Iteration 11 工作区）`
+- Scope: Iteration 11 活动页新增“报名前 2 分钟自检”模块，并补齐四页跨端截图证据包。
 - Evidence: `curl -I http://127.0.0.1:4173` 返回 `HTTP/1.0 200 OK`。
+- Screenshots:
+  - `output/playwright/iteration-11/home-desktop.png`
+  - `output/playwright/iteration-11/home-mobile.png`
+  - `output/playwright/iteration-11/genealogy-desktop.png`
+  - `output/playwright/iteration-11/genealogy-mobile.png`
+  - `output/playwright/iteration-11/events-desktop.png`
+  - `output/playwright/iteration-11/events-mobile.png`
+  - `output/playwright/iteration-11/heritage-desktop.png`
+  - `output/playwright/iteration-11/heritage-mobile.png`
 
 ## Notes
 - 当前为本机临时预览链接，适合快速走查，不等同于稳定线上 preview。
-- 本轮尝试生成四页跨端截图证据包，受 Playwright 浏览器会话冲突影响未成功产出。
+- 本轮已通过 `npx playwright screenshot` 产出四页跨端截图证据包，替代受阻的 Playwright MCP 会话通道。

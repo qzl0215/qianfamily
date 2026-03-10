@@ -156,6 +156,58 @@ export default function EventsPage() {
 
       <section className="page-section pt-4">
         <Container>
+          <div className="soft-panel">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] lg:items-start">
+              <div className="space-y-5">
+                <p className="ornament-line">报名前 2 分钟自检</p>
+                <h2 className="section-title">先完成最小准备，再进入报名可显著减少临场中断</h2>
+                <p className="section-copy">
+                  很多族人并不是不愿意参与，而是“看到活动后还没准备好”。先完成这三步最小自检，再去报名，流程会更顺畅。
+                </p>
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <ButtonLink href="/events/upcoming/">完成自检后去报名</ButtonLink>
+                  <ButtonLink href="/events/my/" variant="secondary">
+                    已报名，查看我的活动
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-3">
+                <article className="subtle-card">
+                  <p className="eyebrow">步骤 1</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    先确定参与场次
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    在近期活动中先选定一个最可行场次，避免同时关注多个活动导致迟迟不报名。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">步骤 2</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    确认同行与到场方式
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    先确认是否与家人同行、预计到场时间和交通方式，减少报名后反复改动。
+                  </p>
+                </article>
+                <article className="subtle-card">
+                  <p className="eyebrow">步骤 3</p>
+                  <h3 className="mt-4 font-serif-cn text-[1.32rem] leading-tight text-ink">
+                    记录一个可联系号码
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    报名前预留一个活动当天可联系号码，确保临时通知和签到提醒可及时接收。
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section pt-4">
+        <Container>
           <div className="soft-panel soft-panel-muted">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] lg:items-start">
               <div className="space-y-5">
