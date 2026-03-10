@@ -20,12 +20,11 @@ export function PortalHomePage() {
   const latestUpdates = announcementCards.slice(0, 3);
   const weeklyFocus = {
     title: "本周推荐先做一步",
-    summary: "如果你是第一次来站，先读 10 分钟文化传承，再进入寻根提交线索。",
-    reason: "为何本周优先：先建立家族认同再提交线索，通常更容易一次走通。",
+    summary: "第一次来站，先读 10 分钟文化内容，再去寻根。",
     checklist: [
-      "先读 1 篇家训或人物内容，确认家族主线。",
+      "先读 1 篇家训或人物内容。",
       "记录 3 条可核对线索：祖籍、辈分、迁徙。",
-      "返回家谱中心提交线索并跟进进度。",
+      "回到家谱中心提交线索。",
     ],
     href: "/heritage/",
     actionLabel: "先走这一步",
@@ -47,10 +46,7 @@ export function PortalHomePage() {
                   先寻根续谱，再连接宗亲、文化与行动
                 </h1>
                 <p className="hero-deck">
-                  无论你是第一次来站还是已有线索，都可以在这里先确认“我该去哪里、先做什么、做完后去哪一步”。
-                </p>
-                <p className="hero-summary">
-                  先按你的当前状态进入入口，再把完成结果回流为公共内容，形成“文化认同、谱系归属、宗亲连接、参与行动、内容回流”的连续路径。
+                  先按当前状态选入口，再按提示往下一步走。
                 </p>
 
                 <div className="editorial-band grid gap-0 sm:grid-cols-5">
@@ -103,7 +99,6 @@ export function PortalHomePage() {
                     {weeklyFocus.title}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-ink">{weeklyFocus.summary}</p>
-                  <p className="mt-2 text-xs leading-6 text-muted">{weeklyFocus.reason}</p>
                   <div className="mt-4 space-y-2 rounded-[1rem] border border-line/70 bg-white/[0.45] p-3">
                     {weeklyFocus.checklist.map((item) => (
                       <p key={item} className="text-xs leading-6 text-ink/85">
@@ -126,7 +121,7 @@ export function PortalHomePage() {
                     <span aria-hidden="true">↗</span>
                   </Link>
                   <p className="mt-3 text-xs leading-6 text-muted">
-                    若你已准备好家谱线索，可跳过本周推荐直接进入寻根。
+                    已有家谱线索，可直接去寻根。
                   </p>
                   <Link
                     href={weeklyFocus.skipHref}
@@ -177,10 +172,10 @@ export function PortalHomePage() {
               <p className="ornament-line">我现在该做什么</p>
               <h2 className="section-title">按当前状态进入，不必从头浏览全部频道</h2>
               <p className="section-copy">
-                首次来访者最容易迷失在信息里。把路径改成“按状态分流”，可显著缩短决策时间并提高行动转化。
+                不确定从哪开始，就先按当前状态选一张卡。
               </p>
               <p className="text-sm leading-7 text-accent">
-                默认起步建议：若你还不确定从哪里开始，请先选择“我是第一次来站”。
+                拿不准时，先选“我是第一次来站”。
               </p>
             </div>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -215,11 +210,11 @@ export function PortalHomePage() {
                 <p className="ornament-line">家族主叙事</p>
                 <h2 className="section-title">先读文化，再办事更容易走对路径</h2>
                 <p className="section-copy">
-                  家谱、活动和礼品都与现实行动相关；先用家训、吴越与人物内容建立认同，后续寻根和参与会更顺畅。
+                  先读家训、吴越或人物，再去寻根或活动。
                 </p>
                 <div className="lead-quote">
                   <p className="font-serif-cn text-[1.38rem] leading-9 text-ink">
-                    花 10 分钟先理解家族精神，再进入寻根或活动，通常能减少中途犹豫和回跳。
+                    先读 10 分钟文化内容，再去寻根或活动。
                   </p>
                 </div>
                 <ButtonLink href="/heritage/" variant="secondary">
@@ -261,7 +256,7 @@ export function PortalHomePage() {
                 <p className="ornament-line">家谱中心</p>
                 <h2 className="section-title">一个入口完成寻根、续谱、接谱</h2>
                 <p className="section-copy">
-                  如果你要确认谱系归属，从家谱中心进入最省时间。先看清所需资料，再按寻根、续谱或接谱动作办理。
+                  要确认谱系归属，就从家谱中心进入。先看准备项，再选寻根、续谱或接谱。
                 </p>
                 <div className="space-y-4">
                   {genealogyFacts.map((fact) => (
@@ -313,7 +308,7 @@ export function PortalHomePage() {
               <p className="ornament-line">祭祖活动</p>
               <h2 className="section-title">从公开活动页进入现实中的宗亲连接</h2>
               <p className="section-copy">
-                活动频道不只是发布一条新闻，而是承载时间、地点、流程、报名、签到和回顾的完整入口。公开页先把活动讲清楚，登录后完成报名与消息接收。
+                先看时间、地点和流程，确认合适后再登录报名。
               </p>
             </div>
 
@@ -361,7 +356,7 @@ export function PortalHomePage() {
               <p className="ornament-line">文化传承</p>
               <h2 className="section-title">先读精选内容，再进入文化频道深读</h2>
               <p className="section-copy">
-                先从首页精选里挑一条最相关内容阅读，再进入文化频道继续深读，能更快建立与家族的真实连接感。
+                先挑一条最相关内容读，再去文化频道继续看。
               </p>
             </div>
 
@@ -397,7 +392,7 @@ export function PortalHomePage() {
               <p className="ornament-line">宣传礼品</p>
               <h2 className="section-title">按使用场景选礼品，3 分钟完成初筛</h2>
               <p className="section-copy">
-                先确定你是祭祖、家堂陈设还是宗亲赠礼场景，再选礼品会更快，也更容易选到真正能用的方案。
+                先定场景，再选礼品。
               </p>
             </div>
 
@@ -444,7 +439,7 @@ export function PortalHomePage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
               <div className="space-y-5">
                 <p className="ornament-line">宗亲动态 / 公告</p>
-                <h2 className="section-title">让活动、寻根和礼品成果持续回流为站内内容</h2>
+                <h2 className="section-title">最近更新与可直接进入的入口</h2>
                 <div className="space-y-4">
                   {announcementCards.map((card) => (
                     <article
