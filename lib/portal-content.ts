@@ -99,14 +99,6 @@ export const mainNavItems = [
   { href: "/gifts/", label: "宣传礼品" },
 ] as const;
 
-export const portalLogicSteps = [
-  "文化认同",
-  "谱系归属",
-  "宗亲连接",
-  "参与行动",
-  "内容回流",
-] as const;
-
 export const homePrimaryActions: PortalAction[] = [
   {
     title: "寻根",
@@ -359,35 +351,35 @@ export const giftHighlightCards: PortalCard[] = [
 
 export const announcementCards: PortalCard[] = [
   {
-    eyebrow: "宗亲动态",
-    title: "家谱中心已整合寻根、续谱与进度查看",
+    eyebrow: "家谱中心",
+    title: "寻根、续谱与进度",
     href: "/genealogy/",
-    summary: "现在可直接进入寻根、续谱和进度查看。",
-    meta: "最新入口",
+    summary: "去看寻根入口、续谱说明和提交进度。",
+    meta: "家谱",
     actionLabel: "去家谱中心办事",
   },
   {
-    eyebrow: "内容回流",
-    title: "家训专题已升级为正式导读页",
+    eyebrow: "钱氏家训",
+    title: "原句、图解与案例",
     href: "/heritage/jiafeng-jiaxun/",
-    summary: "现在可直接读原句、图解和案例。",
-    meta: "最新专题",
+    summary: "去读家训原句，再看图解和族人故事。",
+    meta: "家训",
     actionLabel: "进入家训导读",
   },
   {
-    eyebrow: "活动公告",
-    title: "春祭告祖礼开放时间与流程说明",
+    eyebrow: "春祭告祖礼",
+    title: "时间、地点与流程",
     href: "/events/upcoming/",
-    summary: "现在可直接查看时间、地点和流程说明。",
-    meta: "近期活动",
+    summary: "去看今年春祭的时间、地点和安排。",
+    meta: "祭祖",
     actionLabel: "查看报名说明",
   },
   {
     eyebrow: "宣传礼品",
-    title: "宣传礼品已按使用场景整理",
+    title: "祭祖、赠礼与阅读",
     href: "/gifts/occasions/",
-    summary: "现在可按祭祖、赠礼和阅读场景查看礼品。",
-    meta: "场景整理",
+    summary: "去看不同场景下适合用的礼品。",
+    meta: "礼品",
     actionLabel: "进入礼品场景",
   },
 ];

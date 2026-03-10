@@ -12,24 +12,19 @@ import {
   genealogyFacts,
   homeNarrativeCards,
   homePrimaryActions,
-  portalLogicSteps,
   upcomingEventCards,
 } from "@/lib/portal-content";
 
 export function PortalHomePage() {
   const latestUpdates = announcementCards.slice(0, 3);
   const weeklyFocus = {
-    title: "本周推荐",
-    summary: "第一次来站，先读 10 分钟文化内容，再去寻根。",
-    checklist: [
-      "先读 1 篇家训或人物内容。",
-      "记录 3 条可核对线索：祖籍、辈分、迁徙。",
-      "回到家谱中心提交线索。",
-    ],
-    href: "/heritage/",
-    actionLabel: "先走这一步",
-    nextHref: "/genealogy/find-roots/",
-    nextActionLabel: "完成后去寻根",
+    title: "家训一句",
+    summary: "善事国家，重德修身，崇文尚学。",
+    source: "钱氏家训",
+    href: "/heritage/jiafeng-jiaxun/",
+    actionLabel: "去读家训",
+    nextHref: "/heritage/",
+    nextActionLabel: "看文化传承",
     skipHref: "/genealogy/find-roots/",
     skipActionLabel: "已有线索，直接去寻根",
   };
@@ -41,21 +36,13 @@ export function PortalHomePage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(360px,0.98fr)] lg:items-stretch">
             <div className="surface-card surface-card-hero">
               <div className="max-w-4xl space-y-7">
-                <span className="hero-kicker">钱氏宗亲门户首页</span>
+                <span className="hero-kicker">钱氏宗亲</span>
                 <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
-                  先寻根续谱，再连接宗亲、文化与行动
+                  记得来处，认得今人
                 </h1>
-
-                <div className="editorial-band grid gap-0 sm:grid-cols-5">
-                  {portalLogicSteps.map((step, index) => (
-                    <div key={step} className="editorial-band-item">
-                      <p className="editorial-number">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-ink">{step}</p>
-                    </div>
-                  ))}
-                </div>
+                <p className="hero-deck font-serif-cn text-[1.15rem] leading-8 text-muted sm:text-[1.28rem]">
+                  善事国家，重德修身，崇文尚学
+                </p>
 
                 <div className="flex flex-wrap gap-4 pt-1">
                   <ButtonLink href="/genealogy/find-roots/">先去寻根</ButtonLink>
@@ -73,7 +60,7 @@ export function PortalHomePage() {
               <div className="space-y-5">
                 <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
-                    最新动态
+                    此刻可见
                   </p>
                   <div className="mt-4 space-y-3">
                     {latestUpdates.map((item) => (
@@ -95,14 +82,10 @@ export function PortalHomePage() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
                     {weeklyFocus.title}
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-ink">{weeklyFocus.summary}</p>
-                  <div className="mt-4 space-y-2 rounded-[1rem] border border-line/70 bg-white/[0.45] p-3">
-                    {weeklyFocus.checklist.map((item) => (
-                      <p key={item} className="text-xs leading-6 text-ink/85">
-                        · {item}
-                      </p>
-                    ))}
-                  </div>
+                  <p className="mt-3 font-serif-cn text-[1.72rem] leading-tight text-ink">
+                    {weeklyFocus.summary}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-muted">{weeklyFocus.source}</p>
                   <Link
                     href={weeklyFocus.href}
                     className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
@@ -129,7 +112,7 @@ export function PortalHomePage() {
                   </Link>
                 </div>
 
-                <p className="ornament-line">四个主动作</p>
+                <p className="ornament-line">四个入口</p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {homePrimaryActions.map((action) => (
                     <Link
@@ -409,7 +392,7 @@ export function PortalHomePage() {
           <div className="surface-card">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
               <div className="space-y-5">
-                <p className="ornament-line">宗亲动态 / 公告</p>
+                <p className="ornament-line">最近可看</p>
                 <h2 className="section-title">最近更新</h2>
                 <div className="space-y-4">
                   {announcementCards.map((card) => (
