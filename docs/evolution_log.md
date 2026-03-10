@@ -446,3 +446,30 @@
 - 文案统一转为“你该做什么、为什么这样做、做完去哪里”表达，弱化站点架构自述。
 - 验证结果保持通过：`npm run typecheck`、`npm run build`。
 - 已刷新首页截图证据：`output/playwright/iteration-12/home-desktop.png`、`output/playwright/iteration-12/home-mobile.png`。
+
+## Iteration 13 - 2026-03-10
+
+### 本轮改进
+- 删除首页 Hero 内的“公开浏览，登录办事”辅助文案。
+- 删除右侧侧栏底部“给你的首页建议”整卡。
+- 删除“动作后回流”整块与“首次来站建议路径”整段，保留更高价值的状态分流与频道入口。
+
+### 涉及页面
+- `/`
+
+### 结构变化
+- 首页整体长度收缩，首屏以下减少两整段重复解释块。
+- 未改动路由、导航与部署模型。
+
+### 内容变化
+- 删除重复表达“先做什么/先认同再归属”的二次说明，避免首页连续解释同一判断。
+- 保留最关键入口：Hero、最新动态、本周推荐、主动作、状态分流、频道预览。
+
+### 验证
+- `npm run typecheck` 通过。
+- `npm run build` 通过。
+- 本地预览可访问：`http://127.0.0.1:4173`。
+- 已刷新首页截图证据：`output/playwright/iteration-13/home-desktop.png`、`output/playwright/iteration-13/home-mobile.png`。
+
+### 是否建议合并 main
+- 结论：已按用户要求直接发布生产。

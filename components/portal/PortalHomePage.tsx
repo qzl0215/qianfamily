@@ -7,7 +7,6 @@ import {
   announcementCards,
   cultureHighlightCards,
   homeDecisionCards,
-  firstVisitJourneyCards,
   genealogyCenterCards,
   giftHighlightCards,
   genealogyFacts,
@@ -35,29 +34,6 @@ export function PortalHomePage() {
     skipHref: "/genealogy/find-roots/",
     skipActionLabel: "已有线索，直接去寻根",
   };
-  const returnFlowCards = [
-    {
-      eyebrow: "寻根后",
-      title: "补一条迁徙口述",
-      summary: "把本次确认的祖籍或迁徙线索沉淀到族人故事，供后续寻根者复用。",
-      href: "/heritage/stories/",
-      actionLabel: "去提交故事线索",
-    },
-    {
-      eyebrow: "活动后",
-      title: "上传一份回顾素材",
-      summary: "将照片、纪要或流程心得回流到历届回顾，保持活动经验可追溯。",
-      href: "/events/history/",
-      actionLabel: "去历届回顾",
-    },
-    {
-      eyebrow: "礼品传播后",
-      title: "记录使用场景反馈",
-      summary: "补一条礼品使用情境和反馈，帮助后续族人更快判断适用场景。",
-      href: "/gifts/occasions/",
-      actionLabel: "去礼品场景页",
-    },
-  ] as const;
 
   return (
     <>
@@ -67,12 +43,9 @@ export function PortalHomePage() {
             <div className="surface-card surface-card-hero">
               <div className="max-w-4xl space-y-7">
                 <span className="hero-kicker">钱氏宗亲门户首页</span>
-                <div className="space-y-5">
-                  <p className="ornament-line">公开浏览，登录办事</p>
-                  <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
-                    先寻根续谱，再连接宗亲、文化与行动
-                  </h1>
-                </div>
+                <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
+                  先寻根续谱，再连接宗亲、文化与行动
+                </h1>
                 <p className="hero-deck">
                   无论你是第一次来站还是已有线索，都可以在这里先确认“我该去哪里、先做什么、做完后去哪一步”。
                 </p>
@@ -191,18 +164,6 @@ export function PortalHomePage() {
                     </Link>
                   ))}
                 </div>
-
-                <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
-                    给你的首页建议
-                  </p>
-                  <p className="mt-3 font-serif-cn text-[1.28rem] leading-8 text-ink">
-                    先确定你的当前状态，再进入对应入口，效率最高。
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    如果你是首次来访，先读文化再寻根；如果你已有线索，直接进入寻根与进度页即可。
-                  </p>
-                </div>
               </div>
             </aside>
           </div>
@@ -232,84 +193,6 @@ export function PortalHomePage() {
                   <p className="mt-4 text-sm leading-7 text-muted">{card.summary}</p>
                   <p className="mt-3 text-xs leading-6 text-ink/80">{card.outcomeHint}</p>
                   <p className="mt-4 text-xs leading-6 text-accent">{card.nextStep}</p>
-                  <Link
-                    href={card.href}
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
-                  >
-                    {card.actionLabel}
-                    <span aria-hidden="true">↗</span>
-                  </Link>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5 sm:p-6">
-              <p className="eyebrow">动作后回流</p>
-              <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
-                每次完成动作后，至少回流一条可复用内容
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-muted">
-                把办事结果回流成公共记忆，下一位族人就能少走一段路，门户主线也会持续自我增强。
-              </p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                {returnFlowCards.map((card) => (
-                  <article key={card.title} className="subtle-card">
-                    <p className="eyebrow">{card.eyebrow}</p>
-                    <h4 className="mt-4 font-serif-cn text-[1.24rem] leading-tight text-ink">
-                      {card.title}
-                    </h4>
-                    <p className="mt-3 text-sm leading-7 text-muted">{card.summary}</p>
-                    <Link
-                      href={card.href}
-                      className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
-                    >
-                      {card.actionLabel}
-                      <span aria-hidden="true">↗</span>
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="page-section pt-4" id="first-visit-journey">
-        <Container>
-          <div className="soft-panel soft-panel-muted">
-            <div className="space-y-4">
-              <p className="ornament-line">首次来站建议路径</p>
-              <h2 className="section-title">先认同，再归属，再连接与行动</h2>
-              <p className="section-copy">
-                第一次进入网站时，优先按三步完成理解与行动。先建立文化认同，再确认谱系归属，最后进入活动和礼品场景，把线上认同变成现实参与。
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              {firstVisitJourneyCards.map((card) => (
-                <article key={card.title} className="subtle-card">
-                  {card.eyebrow ? <p className="eyebrow">{card.eyebrow}</p> : null}
-                  <h3 className="mt-4 font-serif-cn text-[1.5rem] leading-tight text-ink">
-                    {card.title}
-                  </h3>
-                  {card.meta ? (
-                    <p className="mt-3 text-sm leading-7 text-accent">{card.meta}</p>
-                  ) : null}
-                  <p className="mt-4 text-[0.98rem] leading-8 text-muted">
-                    {card.summary}
-                  </p>
-                  {card.tags ? (
-                    <div className="mt-5 flex flex-wrap gap-2 text-sm text-accent">
-                      {card.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border border-accent/10 bg-white/50 px-3 py-1.5"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  ) : null}
                   <Link
                     href={card.href}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
