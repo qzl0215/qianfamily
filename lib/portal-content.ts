@@ -32,12 +32,6 @@ export type PortalCard = {
   tags?: string[];
 };
 
-export type PortalRole = {
-  role: string;
-  scope: string;
-  description: string;
-};
-
 export type WorkflowStep = {
   title: string;
   description: string;
@@ -269,11 +263,11 @@ export const genealogyCenterCards: PortalCard[] = [
 ];
 
 export const genealogyFacts: PortalFact[] = [
-  { label: "主线环节", value: "谱系归属" },
-  { label: "定位", value: "唯一谱系入口中心" },
-  { label: "下一步", value: "进入祭祖活动与宗亲连接" },
-  { label: "访问方式", value: "公开先读说明，登录后办事" },
-  { label: "核心动作", value: "寻根、续谱、接谱、状态查询" },
+  { label: "祖籍", value: "村名、地名、祠堂" },
+  { label: "辈分", value: "字辈、排行、称谓" },
+  { label: "迁徙", value: "迁出地、迁入地、年代" },
+  { label: "旧谱", value: "谱页、影印、墓志" },
+  { label: "口述", value: "上一代姓名与支派称呼" },
 ];
 
 export const upcomingEventCards: PortalCard[] = [
@@ -381,24 +375,6 @@ export const announcementCards: PortalCard[] = [
     summary: "去看不同场景下适合用的礼品。",
     meta: "礼品",
     actionLabel: "进入礼品场景",
-  },
-];
-
-export const accessRoles: PortalRole[] = [
-  {
-    role: "游客",
-    scope: "公开浏览",
-    description: "可查看首页、文化内容、活动详情、礼品目录以及家谱中心说明。",
-  },
-  {
-    role: "族人用户",
-    scope: "登录办事",
-    description: "可提交寻根、续谱、接谱、活动报名、订单和个人进度查看。",
-  },
-  {
-    role: "运营 / 宗亲会管理员",
-    scope: "发布与审核",
-    description: "负责谱系审核、活动发布、订单管理和内容持续更新。",
   },
 ];
 
