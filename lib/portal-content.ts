@@ -3,20 +3,9 @@ export type PortalFact = {
   value: string;
 };
 
-export type PortalAction = {
-  title: string;
+export type HomeActionLink = {
+  label: string;
   href: string;
-  summary: string;
-  note: string;
-  actionLabel?: string;
-  status?: string;
-};
-
-export type HomeDecisionCard = {
-  title: string;
-  href: string;
-  summary: string;
-  actionLabel: string;
 };
 
 export type PortalCard = {
@@ -90,127 +79,63 @@ export const mainNavItems = [
   { href: "/gifts/", label: "宣传礼品" },
 ] as const;
 
-export const homePrimaryActions: PortalAction[] = [
-  {
-    title: "寻根",
-    href: "/genealogy/find-roots/",
-    summary: "先整理祖籍、支派和辈分线索，再进入寻根。",
-    note: "先看说明，再提交线索。",
-    actionLabel: "进入寻根流程",
-    status: "优先入口",
-  },
-  {
-    title: "续谱",
-    href: "/genealogy/continue/",
-    summary: "为已确认支派补录新成员、迁居和关键资料。",
-    note: "先按格式整理，再登录提交。",
-    actionLabel: "查看续谱说明",
-    status: "高频动作",
-  },
-  {
-    title: "活动报名",
-    href: "/events/upcoming/",
-    summary: "先看近期活动，再选择一场报名参加。",
-    note: "先看时间流程，再登录报名。",
-    actionLabel: "查看近期活动",
-    status: "连接入口",
-  },
-  {
-    title: "礼品选购",
-    href: "/gifts/catalog/",
-    summary: "按祭祖、陈设和赠礼场景选择礼品。",
-    note: "先按场景筛选，再下单。",
-    actionLabel: "按场景选礼品",
-    status: "参与行动",
-  },
-];
+export const homeHeroContent = {
+  kicker: "钱氏宗亲",
+  title: "记得来处，认得今人",
+  quote: "善事国家，重德修身，崇文尚学",
+  quoteSource: "钱氏家训",
+  primaryAction: { label: "去寻根", href: "/genealogy/find-roots/" },
+  secondaryAction: { label: "读钱氏家训", href: "/heritage/jiafeng-jiaxun/" },
+} as const;
 
-export const homeDecisionCards: HomeDecisionCard[] = [
-  {
-    title: "我是第一次来站",
-    href: "/heritage/",
-    summary: "先读文化内容，再决定从寻根还是活动开始。",
-    actionLabel: "先读文化传承",
-  },
-  {
-    title: "我已有家谱线索",
+export const homeRootFeature = {
+  eyebrow: "家谱中心",
+  title: "家中留下的线索",
+  summary: "祖籍、辈分、迁徙、旧谱、口述。",
+  primaryAction: {
+    label: "去寻根",
     href: "/genealogy/find-roots/",
-    summary: "直接去寻根，并按清单准备资料。",
-    actionLabel: "直接去寻根",
   },
-  {
-    title: "我想参与线下宗亲活动",
-    href: "/events/upcoming/",
-    summary: "先看时间、地点和流程，再决定报名。",
-    actionLabel: "查看近期活动",
-  },
-  {
-    title: "我想做文化传播",
-    href: "/gifts/occasions/",
-    summary: "先按使用场景选礼品，再看具体款式。",
-    actionLabel: "查看礼品场景",
-  },
-];
+  secondaryLinks: [
+    { label: "续谱", href: "/genealogy/continue/" },
+    { label: "我接家谱", href: "/genealogy/takeover/" },
+    { label: "查看进度", href: "/genealogy/status/" },
+  ],
+} as const satisfies {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  primaryAction: HomeActionLink;
+  secondaryLinks: readonly HomeActionLink[];
+};
 
-export const firstVisitJourneyCards: PortalCard[] = [
-  {
-    eyebrow: "第一步",
-    title: "先建立文化认同",
-    href: "/heritage/",
-    summary: "先读家训、历史和人物，建立基本认同。",
-    meta: "文化认同",
-    actionLabel: "进入文化传承",
-    tags: ["家训", "历史", "人物"],
-  },
-  {
-    eyebrow: "第二步",
-    title: "再确认谱系归属",
-    href: "/genealogy/find-roots/",
-    summary: "带着祖籍、辈分和迁徙线索进入寻根。",
-    meta: "谱系归属",
-    actionLabel: "进入寻根入口",
-    tags: ["寻根", "续谱", "接谱"],
-  },
-  {
-    eyebrow: "第三步",
-    title: "进入连接与行动",
-    href: "/events/",
-    summary: "从活动和礼品开始，把认同转成现实参与。",
-    meta: "宗亲连接与行动",
-    actionLabel: "查看活动与礼品",
-    tags: ["活动", "礼品", "回流"],
-  },
-];
+export const homeStoryFeature = {
+  eyebrow: "族人故事",
+  title: "迁徙与落脚",
+  summary: "祖辈口述、残谱旧页、异地重逢。",
+  href: "/heritage/stories/",
+  actionLabel: "读族人故事",
+  secondaryLinks: [
+    { label: "寻根经历", href: "/genealogy/find-roots/" },
+    { label: "当代参与", href: "/events/upcoming/" },
+  ],
+} as const satisfies {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  href: string;
+  actionLabel: string;
+  secondaryLinks: readonly HomeActionLink[];
+};
 
-export const homeNarrativeCards: PortalCard[] = [
-  {
-    eyebrow: "精神主轴",
-    title: "钱氏家训",
-    href: "/heritage/jiafeng-jiaxun/",
-    summary: "先读三大价值，再看原句和案例。",
-    meta: "原句、图解、案例",
-    actionLabel: "进入家风家训",
-    tags: ["家训", "家风", "导读"],
-  },
-  {
-    eyebrow: "历史底板",
-    title: "钱王与吴越",
-    href: "/heritage/wuyue/",
-    summary: "从立国、治水到纳土归宋，看清吴越来路。",
-    meta: "吴越史专题",
-    actionLabel: "进入吴越专题",
-    tags: ["吴越", "钱镠", "历史"],
-  },
-  {
-    eyebrow: "现代回响",
-    title: "近代钱氏人物",
-    href: "/heritage/figures/",
-    summary: "从三位代表人物看钱氏精神如何进入现代中国。",
-    meta: "人物专题",
-    actionLabel: "进入人物专题",
-    tags: ["科学", "教育", "人物"],
-  },
-];
+export const homeJiaxunAnchor = {
+  eyebrow: "钱氏家训",
+  title: "一句家训，代代相传",
+  quote: "利在一身勿谋也，利在天下者必谋之。",
+  summary: "原句、图解、人物。",
+  href: "/heritage/jiafeng-jiaxun/",
+  actionLabel: "读钱氏家训",
+} as const;
 
 export const genealogyCenterCards: PortalCard[] = [
   {
@@ -285,8 +210,38 @@ export const upcomingEventCards: PortalCard[] = [
   },
 ];
 
+const heritageNarrativeCards: PortalCard[] = [
+  {
+    eyebrow: "精神主轴",
+    title: "钱氏家训",
+    href: "/heritage/jiafeng-jiaxun/",
+    summary: "先读三大价值，再看原句和案例。",
+    meta: "原句、图解、案例",
+    actionLabel: "进入家风家训",
+    tags: ["家训", "家风", "导读"],
+  },
+  {
+    eyebrow: "历史底板",
+    title: "钱王与吴越",
+    href: "/heritage/wuyue/",
+    summary: "从立国、治水到纳土归宋，看清吴越来路。",
+    meta: "吴越史专题",
+    actionLabel: "进入吴越专题",
+    tags: ["吴越", "钱镠", "历史"],
+  },
+  {
+    eyebrow: "现代回响",
+    title: "近代钱氏人物",
+    href: "/heritage/figures/",
+    summary: "从三位代表人物看钱氏精神如何进入现代中国。",
+    meta: "人物专题",
+    actionLabel: "进入人物专题",
+    tags: ["科学", "教育", "人物"],
+  },
+];
+
 export const cultureHighlightCards: PortalCard[] = [
-  ...homeNarrativeCards,
+  ...heritageNarrativeCards,
   {
     eyebrow: "族人故事",
     title: "口述与迁徙故事",
@@ -325,41 +280,6 @@ export const giftHighlightCards: PortalCard[] = [
     meta: "阅读与青年活动",
     actionLabel: "查看礼品总览",
     tags: ["阅读", "青年", "传播"],
-  },
-];
-
-export const announcementCards: PortalCard[] = [
-  {
-    eyebrow: "家谱中心",
-    title: "寻根、续谱与进度",
-    href: "/genealogy/",
-    summary: "去看寻根入口、续谱说明和提交进度。",
-    meta: "家谱",
-    actionLabel: "去家谱中心办事",
-  },
-  {
-    eyebrow: "钱氏家训",
-    title: "原句、图解与案例",
-    href: "/heritage/jiafeng-jiaxun/",
-    summary: "去读家训原句，再看图解和族人故事。",
-    meta: "家训",
-    actionLabel: "进入家训导读",
-  },
-  {
-    eyebrow: "春祭告祖礼",
-    title: "时间、地点与流程",
-    href: "/events/upcoming/",
-    summary: "去看今年春祭的时间、地点和安排。",
-    meta: "祭祖",
-    actionLabel: "查看报名说明",
-  },
-  {
-    eyebrow: "宣传礼品",
-    title: "祭祖、赠礼与阅读",
-    href: "/gifts/occasions/",
-    summary: "去看不同场景下适合用的礼品。",
-    meta: "礼品",
-    actionLabel: "进入礼品场景",
   },
 ];
 
