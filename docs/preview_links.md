@@ -1,15 +1,15 @@
 # Preview Links
 
-Last updated: 2026-03-09 16:33:30 CST
+Last updated: 2026-03-10 11:28:12 CST
 
 ## Latest
-- Status: 可访问（本地 dev 预览已恢复）。
+- Status: 可访问（本地静态预览可访问）。
 - URL: http://127.0.0.1:4173
-- Branch: `feat/qianfamily-evolution`
-- Commit: `a50c091`
-- Scope: Iteration 1-8 累计改动（首页分流闭环、家谱自检映射、活动回流清单、文化页寻根桥接）。
-- Evidence: `curl -I http://127.0.0.1:4173` 返回 `HTTP/1.1 200 OK`。
+- Branch: `detached HEAD`（来源于 `feat/qianfamily-evolution` 工作树快照）
+- Commit: `未提交（Iteration 10 工作区）`
+- Scope: Iteration 10 首页增强（推荐清单+二跳入口、差异化 CTA、默认起步提示）。
+- Evidence: `curl -I http://127.0.0.1:4173` 返回 `HTTP/1.0 200 OK`。
 
 ## Notes
 - 当前为本机临时预览链接，适合快速走查，不等同于稳定线上 preview。
-- 建议后续接入固定 preview 流水线，便于每轮自动化沉淀可分享链接。
+- 本轮尝试生成四页跨端截图证据包，受 Playwright 浏览器会话冲突影响未成功产出。

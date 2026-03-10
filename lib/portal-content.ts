@@ -8,6 +8,7 @@ export type PortalAction = {
   href: string;
   summary: string;
   note: string;
+  actionLabel?: string;
   status?: string;
 };
 
@@ -112,6 +113,7 @@ export const homePrimaryActions: PortalAction[] = [
     href: "/genealogy/find-roots/",
     summary: "先确认祖籍、支派和辈分线索，再把零散口述转成可核对的谱系信息。",
     note: "建议先读 5 分钟说明，再提交线索。",
+    actionLabel: "进入寻根流程",
     status: "优先入口",
   },
   {
@@ -119,6 +121,7 @@ export const homePrimaryActions: PortalAction[] = [
     href: "/genealogy/continue/",
     summary: "为已确认支派补录新世系与迁徙资料，让支派谱牒持续不断代。",
     note: "先看格式要求，再登录提交。",
+    actionLabel: "查看续谱说明",
     status: "高频动作",
   },
   {
@@ -126,6 +129,7 @@ export const homePrimaryActions: PortalAction[] = [
     href: "/events/upcoming/",
     summary: "从春祭、宗亲联络到青年读书，把线上认同转成可参与的线下连接。",
     note: "先看活动说明，再登录报名。",
+    actionLabel: "查看近期活动",
     status: "连接入口",
   },
   {
@@ -133,6 +137,7 @@ export const homePrimaryActions: PortalAction[] = [
     href: "/gifts/catalog/",
     summary: "按祭祖、陈设与赠礼场景选择礼品，让文化表达进入家庭与活动现场。",
     note: "先按场景筛选，再进入订单。",
+    actionLabel: "按场景选礼品",
     status: "参与行动",
   },
 ];

@@ -23,8 +23,15 @@ export function PortalHomePage() {
     title: "本周推荐先做一步",
     summary: "如果你是第一次来站，先读 10 分钟文化传承，再进入寻根提交线索。",
     reason: "为何本周优先：首次访客占比更高时，先建立认同再办事可明显降低路径中断。",
+    checklist: [
+      "先读 1 篇家训或人物内容，确认家族主线。",
+      "记录 3 条可核对线索：祖籍、辈分、迁徙。",
+      "返回家谱中心提交线索并跟进进度。",
+    ],
     href: "/heritage/",
     actionLabel: "先走这一步",
+    nextHref: "/genealogy/find-roots/",
+    nextActionLabel: "完成后去寻根",
   };
 
   return (
@@ -99,11 +106,25 @@ export function PortalHomePage() {
                   </p>
                   <p className="mt-3 text-sm leading-7 text-ink">{weeklyFocus.summary}</p>
                   <p className="mt-2 text-xs leading-6 text-muted">{weeklyFocus.reason}</p>
+                  <div className="mt-4 space-y-2 rounded-[1rem] border border-line/70 bg-white/[0.45] p-3">
+                    {weeklyFocus.checklist.map((item) => (
+                      <p key={item} className="text-xs leading-6 text-ink/85">
+                        · {item}
+                      </p>
+                    ))}
+                  </div>
                   <Link
                     href={weeklyFocus.href}
                     className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
                   >
                     {weeklyFocus.actionLabel}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                  <Link
+                    href={weeklyFocus.nextHref}
+                    className="ml-4 mt-4 inline-flex items-center gap-2 text-xs font-medium text-muted underline-offset-4 hover:text-ink hover:underline"
+                  >
+                    {weeklyFocus.nextActionLabel}
                     <span aria-hidden="true">↗</span>
                   </Link>
                 </div>
@@ -129,7 +150,7 @@ export function PortalHomePage() {
                         {action.note}
                       </p>
                       <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 group-hover:underline">
-                        进入入口
+                        {action.actionLabel ?? "进入入口"}
                         <span aria-hidden="true">↗</span>
                       </span>
                     </Link>
@@ -161,6 +182,9 @@ export function PortalHomePage() {
               <h2 className="section-title">按当前状态进入，不必从头浏览全部频道</h2>
               <p className="section-copy">
                 首次来访者最容易迷失在信息里。把路径改成“按状态分流”，可显著缩短决策时间并提高行动转化。
+              </p>
+              <p className="text-sm leading-7 text-accent">
+                默认起步建议：若你还不确定从哪里开始，请先选择“我是第一次来站”。
               </p>
             </div>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
