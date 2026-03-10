@@ -148,19 +148,16 @@ export function PortalHomePage() {
         <Container>
           <div className="soft-panel">
             <div className="space-y-4">
-              <p className="ornament-line">我现在该做什么</p>
-              <h2 className="section-title">按当前状态选择入口</h2>
+              <p className="ornament-line">四种来意</p>
+              <h2 className="section-title">从这里进入</h2>
             </div>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {homeDecisionCards.map((card) => (
                 <article key={card.title} className="subtle-card">
-                  <span className="status-chip">{card.effortHint}</span>
-                  <h3 className="mt-4 font-serif-cn text-[1.36rem] leading-tight text-ink">
+                  <h3 className="font-serif-cn text-[1.36rem] leading-tight text-ink">
                     {card.title}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-muted">{card.summary}</p>
-                  <p className="mt-3 text-xs leading-6 text-ink/80">{card.outcomeHint}</p>
-                  <p className="mt-4 text-xs leading-6 text-accent">{card.nextStep}</p>
                   <Link
                     href={card.href}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"

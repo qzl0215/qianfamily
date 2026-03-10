@@ -31,4 +31,5 @@
 | OP-024 | 清理卡片辅助字段中的解释型语句 | 继续压缩 `note / meta / effortHint` 的冗余表达 | 低 | P2 | 已完成（Iteration 18） |
 | OP-025 | 清理首页正文中的解释型句子 | 继续压缩 Hero 与 section-copy 的自我说明口吻 | 低 | P1 | 已完成（Iteration 19） |
 | OP-026 | 清理首页事实卡与角色说明中的系统表述 | 继续减少“定位、权限、流程解释”式表述 | 低 | P2 | 已完成（Iteration 22） |
-| OP-027 | 清理首页快速分流卡中的残余引导腔 | 继续减少 `effortHint / outcomeHint / nextStep` 的说教感 | 低 | P2 | 待执行 |
+| OP-027 | 清理首页快速分流卡中的残余引导腔 | 继续减少 `effortHint / outcomeHint / nextStep` 的说教感 | 低 | P2 | 已完成（Iteration 23） |
+| OP-028 | 清理首页分流卡摘要中的流程口吻 | 继续减少“先…再…”式指导表达 | 低 | P2 | 待执行 |

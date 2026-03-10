@@ -16,9 +16,6 @@ export type HomeDecisionCard = {
   title: string;
   href: string;
   summary: string;
-  effortHint: string;
-  outcomeHint: string;
-  nextStep: string;
   actionLabel: string;
 };
 
@@ -133,36 +130,24 @@ export const homeDecisionCards: HomeDecisionCard[] = [
     title: "我是第一次来站",
     href: "/heritage/",
     summary: "先读文化内容，再决定从寻根还是活动开始。",
-    effortHint: "先花 10 分钟看主线",
-    outcomeHint: "看清先去哪一个入口",
-    nextStep: "下一步：去家谱寻根",
     actionLabel: "先读文化传承",
   },
   {
     title: "我已有家谱线索",
     href: "/genealogy/find-roots/",
     summary: "直接去寻根，并按清单准备资料。",
-    effortHint: "先备好 3 项基础线索",
-    outcomeHint: "整理出一份可提交资料",
-    nextStep: "下一步：看提交进度",
     actionLabel: "直接去寻根",
   },
   {
     title: "我想参与线下宗亲活动",
     href: "/events/upcoming/",
     summary: "先看时间、地点和流程，再决定报名。",
-    effortHint: "5 分钟筛完近期活动",
-    outcomeHint: "选定一场要报名的活动",
-    nextStep: "下一步：看礼品场景",
     actionLabel: "查看近期活动",
   },
   {
     title: "我想做文化传播",
     href: "/gifts/occasions/",
     summary: "先按使用场景选礼品，再看具体款式。",
-    effortHint: "先定 1 个使用场景",
-    outcomeHint: "选出一组合适礼品",
-    nextStep: "下一步：看活动日程",
     actionLabel: "查看礼品场景",
   },
 ];
