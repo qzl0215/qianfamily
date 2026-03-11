@@ -82,10 +82,10 @@ export const mainNavItems = [
 export const homeHeroContent = {
   kicker: "钱氏宗亲",
   title: "记得来处，认得今人",
-  quote: "善事国家，重德修身，崇文尚学",
+  quote: "心术不可得罪于天地，言行皆当无愧于圣贤。",
   quoteSource: "钱氏家训",
   primaryAction: { label: "去寻根", href: "/genealogy/find-roots/" },
-  secondaryAction: { label: "读钱氏家训", href: "/heritage/jiafeng-jiaxun/" },
+  secondaryAction: { label: "读这句家训", href: "/heritage/jiafeng-jiaxun/" },
 } as const;
 
 export const homeRootFeature = {
