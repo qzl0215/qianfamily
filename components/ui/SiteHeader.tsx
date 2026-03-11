@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
 import { mainNavItems } from "@/lib/portal-content";
+import { siteMeta } from "@/lib/site-meta";
 
 export function SiteHeader() {
   return (
@@ -12,7 +13,7 @@ export function SiteHeader() {
             <span className="grid h-11 w-11 place-items-center rounded-2xl border border-accent/15 bg-[linear-gradient(180deg,rgba(232,221,209,0.92),rgba(251,248,242,0.7))] font-serif-cn text-lg font-semibold text-accent">
               钱
             </span>
-            <span className="font-serif-cn text-lg leading-none">钱氏宗亲门户</span>
+            <span className="font-serif-cn text-lg leading-none">{siteMeta.name}</span>
           </Link>
 
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">

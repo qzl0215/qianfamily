@@ -29,7 +29,7 @@ export function SiteFooter() {
         <div className="rounded-[1.9rem] border border-line/70 bg-white/35 p-5 shadow-[0_12px_24px_rgba(82,65,50,0.04)] sm:p-6">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)]">
             <div className="space-y-4">
-              <p className="ornament-line">钱氏宗亲门户</p>
+              <p className="ornament-line">{siteMeta.name}</p>
               <p className="font-serif-cn text-[1.35rem] leading-tight text-ink sm:text-[1.55rem]">
                 记得来处，认得今人。
               </p>
