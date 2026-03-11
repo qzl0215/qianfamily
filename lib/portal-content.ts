@@ -132,9 +132,9 @@ export const homeJiaxunAnchor = {
   eyebrow: "钱氏家训",
   title: "一句家训，代代相传",
   quote: "利在一身勿谋也，利在天下者必谋之。",
-  summary: "原句、图解、人物。",
+  summary: "从钱镠到钱学森，这句话一直有人在践行。",
   href: "/heritage/jiafeng-jiaxun/",
-  actionLabel: "读钱氏家训",
+  actionLabel: "读这句家训",
 } as const;
 
 export const genealogyCenterCards: PortalCard[] = [
