@@ -111,13 +111,13 @@ export const homeRootFeature = {
 
 export const homeStoryFeature = {
   eyebrow: "族人故事",
-  title: "迁徙与落脚",
+  title: "一页残谱，接回一支人",
   summary: "祖辈口述、残谱旧页、异地重逢。",
   href: "/heritage/stories/",
-  actionLabel: "读族人故事",
+  actionLabel: "读这段故事",
   secondaryLinks: [
-    { label: "寻根经历", href: "/genealogy/find-roots/" },
-    { label: "当代参与", href: "/events/upcoming/" },
+    { label: "从口述里寻根", href: "/genealogy/find-roots/" },
+    { label: "在祭祖时相认", href: "/events/upcoming/" },
   ],
 } as const satisfies {
   eyebrow: string;
