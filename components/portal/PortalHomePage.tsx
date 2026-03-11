@@ -17,13 +17,12 @@ export function PortalHomePage() {
         <Container>
           <div className="surface-card surface-card-hero">
             <div className="max-w-4xl space-y-8">
-              <span className="hero-kicker">{homeHeroContent.kicker}</span>
+              <span className="hero-kicker">{homeHeroContent.quoteSource}</span>
               <div className="space-y-5">
                 <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
                   {homeHeroContent.title}
                 </h1>
-                <div className="max-w-2xl space-y-3">
-                  <p className="eyebrow">{homeHeroContent.quoteSource}</p>
+                <div className="max-w-2xl">
                   <p className="hero-deck font-serif-cn text-[1.15rem] leading-8 text-muted sm:text-[1.3rem]">
                     {homeHeroContent.quote}
                   </p>

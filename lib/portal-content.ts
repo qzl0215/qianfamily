@@ -80,7 +80,6 @@ export const mainNavItems = [
 ] as const;
 
 export const homeHeroContent = {
-  kicker: "钱氏宗亲",
   title: "记得来处，认得今人",
   quote: "心术不可得罪于天地，言行皆当无愧于圣贤。",
   quoteSource: "钱氏家训",
