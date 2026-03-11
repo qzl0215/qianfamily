@@ -90,8 +90,8 @@ export const homeHeroContent = {
 
 export const homeRootFeature = {
   eyebrow: "家谱中心",
-  title: "家中留下的线索",
-  summary: "祖籍、辈分、迁徙、旧谱、口述。",
+  title: "祖籍、字辈、旧谱",
+  summary: "迁徙、祠堂、口述。",
   primaryAction: {
     label: "去寻根",
     href: "/genealogy/find-roots/",
