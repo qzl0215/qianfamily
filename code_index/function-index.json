@@ -1,0 +1,480 @@
+{
+  "generatedAt": "2026-03-15T01:48:41.277Z",
+  "modules": {
+    "events": {
+      "path": "src/modules/events",
+      "exports": [
+        {
+          "name": "EventsPage",
+          "file": "src/modules/events/EventsPage.tsx"
+        },
+        {
+          "name": "upcomingEventCards",
+          "file": "src/modules/events/content.ts"
+        },
+        {
+          "name": "eventsOverviewFacts",
+          "file": "src/modules/events/content.ts"
+        },
+        {
+          "name": "eventCalendarCards",
+          "file": "src/modules/events/content.ts"
+        },
+        {
+          "name": "eventHistoryCards",
+          "file": "src/modules/events/content.ts"
+        },
+        {
+          "name": "eventDetails",
+          "file": "src/modules/events/content.ts"
+        },
+        {
+          "name": "eventsMyContent",
+          "file": "src/modules/events/content.ts"
+        }
+      ]
+    },
+    "genealogy": {
+      "path": "src/modules/genealogy",
+      "exports": [
+        {
+          "name": "GenealogyPage",
+          "file": "src/modules/genealogy/GenealogyPage.tsx"
+        },
+        {
+          "name": "genealogyCenterCards",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "genealogyFacts",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "accessRoles",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "genealogyFindRootsContent",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "genealogyContinueContent",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "genealogyTakeoverContent",
+          "file": "src/modules/genealogy/content.ts"
+        },
+        {
+          "name": "genealogyStatusContent",
+          "file": "src/modules/genealogy/content.ts"
+        }
+      ]
+    },
+    "gifts": {
+      "path": "src/modules/gifts",
+      "exports": [
+        {
+          "name": "giftsOverviewFacts",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftsLandingFacts",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftHighlightCards",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftOccasionCards",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftDetails",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftOrderFacts",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftOrderPreparationBlocks",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftOrderStatusSteps",
+          "file": "src/modules/gifts/content.ts"
+        },
+        {
+          "name": "giftOrderFaq",
+          "file": "src/modules/gifts/content.ts"
+        }
+      ]
+    },
+    "heritage": {
+      "path": "src/modules/heritage",
+      "exports": [
+        {
+          "name": "homeNarrativeCards",
+          "file": "src/modules/heritage/content.ts"
+        },
+        {
+          "name": "storyCards",
+          "file": "src/modules/heritage/content.ts"
+        },
+        {
+          "name": "cultureHighlightCards",
+          "file": "src/modules/heritage/content.ts"
+        },
+        {
+          "name": "heritageOverviewFacts",
+          "file": "src/modules/heritage/content.ts"
+        }
+      ]
+    },
+    "navigation": {
+      "path": "src/modules/navigation",
+      "exports": [
+        {
+          "name": "SiteFooter",
+          "file": "src/modules/navigation/SiteFooter.tsx"
+        },
+        {
+          "name": "SiteHeader",
+          "file": "src/modules/navigation/SiteHeader.tsx"
+        },
+        {
+          "name": "mainNavItems",
+          "file": "src/modules/navigation/navigation.ts"
+        },
+        {
+          "name": "footerLinkGroups",
+          "file": "src/modules/navigation/navigation.ts"
+        },
+        {
+          "name": "siteMeta",
+          "file": "src/modules/navigation/site-meta.ts"
+        }
+      ]
+    },
+    "portal-home": {
+      "path": "src/modules/portal-home",
+      "exports": [
+        {
+          "name": "PortalHomePage",
+          "file": "src/modules/portal-home/PortalHomePage.tsx"
+        },
+        {
+          "name": "portalLogicSteps",
+          "file": "src/modules/portal-home/content.ts"
+        },
+        {
+          "name": "homePrimaryActions",
+          "file": "src/modules/portal-home/content.ts"
+        },
+        {
+          "name": "homeDecisionCards",
+          "file": "src/modules/portal-home/content.ts"
+        },
+        {
+          "name": "firstVisitJourneyCards",
+          "file": "src/modules/portal-home/content.ts"
+        },
+        {
+          "name": "announcementCards",
+          "file": "src/modules/portal-home/content.ts"
+        },
+        {
+          "name": "getLatestUpdates",
+          "file": "src/modules/portal-home/recommendations.ts"
+        },
+        {
+          "name": "getWeeklyFocus",
+          "file": "src/modules/portal-home/recommendations.ts"
+        },
+        {
+          "name": "HomeAnnouncementsSection",
+          "file": "src/modules/portal-home/sections/HomeAnnouncementsSection.tsx"
+        },
+        {
+          "name": "HomeCultureGiftsSection",
+          "file": "src/modules/portal-home/sections/HomeCultureGiftsSection.tsx"
+        },
+        {
+          "name": "HomeDecisionJourneySection",
+          "file": "src/modules/portal-home/sections/HomeDecisionJourneySection.tsx"
+        },
+        {
+          "name": "HomeGenealogyEventsSection",
+          "file": "src/modules/portal-home/sections/HomeGenealogyEventsSection.tsx"
+        },
+        {
+          "name": "HomeHeroSection",
+          "file": "src/modules/portal-home/sections/HomeHeroSection.tsx"
+        },
+        {
+          "name": "HomeNarrativeSection",
+          "file": "src/modules/portal-home/sections/HomeNarrativeSection.tsx"
+        }
+      ]
+    },
+    "portal-shell": {
+      "path": "src/modules/portal-shell",
+      "exports": [
+        {
+          "name": "CardSection",
+          "file": "src/modules/portal-shell/CardSection.tsx"
+        },
+        {
+          "name": "DetailPage",
+          "file": "src/modules/portal-shell/DetailPage.tsx"
+        },
+        {
+          "name": "FaqSection",
+          "file": "src/modules/portal-shell/FaqSection.tsx"
+        },
+        {
+          "name": "PageHero",
+          "file": "src/modules/portal-shell/PageHero.tsx"
+        },
+        {
+          "name": "WorkflowPage",
+          "file": "src/modules/portal-shell/WorkflowPage.tsx"
+        },
+        {
+          "name": "PortalFact",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "PortalAction",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "HomeDecisionCard",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "PortalCard",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "PortalRole",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "WorkflowStep",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "FaqItem",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "WorkflowPageContent",
+          "file": "src/modules/portal-shell/types.ts"
+        },
+        {
+          "name": "DetailPageContent",
+          "file": "src/modules/portal-shell/types.ts"
+        }
+      ]
+    },
+    "topics/figures": {
+      "path": "src/modules/topics/figures",
+      "exports": [
+        {
+          "name": "FiguresTopicPage",
+          "file": "src/modules/topics/figures/FiguresTopicPage.tsx"
+        },
+        {
+          "name": "FiguresHeroFact",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "FiguresPersonBlock",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "FiguresValueBlock",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "FiguresSourceLink",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "figuresPageMeta",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "figuresHeroFacts",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "figuresPersonBlocks",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "figuresValueBlocks",
+          "file": "src/modules/topics/figures/content.ts"
+        },
+        {
+          "name": "figuresSourceLinks",
+          "file": "src/modules/topics/figures/content.ts"
+        }
+      ]
+    },
+    "topics/jiaxun": {
+      "path": "src/modules/topics/jiaxun",
+      "exports": [
+        {
+          "name": "JiaxunTopicPage",
+          "file": "src/modules/topics/jiaxun/JiaxunTopicPage.tsx"
+        },
+        {
+          "name": "QuoteCaseSection",
+          "file": "src/modules/topics/jiaxun/QuoteCaseSection.tsx"
+        },
+        {
+          "name": "JiaxunHeroFact",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunValueBlock",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunChapterBlock",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunQuoteCaseBlock",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunCaseFilter",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunSourceLink",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunTransmissionBlock",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunFormationStep",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "JiaxunShanghaiDetail",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "jiaxunPageMeta",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "heroFacts",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "valueBlocks",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "chapterBlocks",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "quoteCaseBlocks",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "transmissionBlocks",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "formationSteps",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "shanghaiDetails",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        },
+        {
+          "name": "sourceLinks",
+          "file": "src/modules/topics/jiaxun/content.ts"
+        }
+      ]
+    },
+    "topics/registry": {
+      "path": "src/modules/topics/registry",
+      "exports": [
+        {
+          "name": "TopicSlug",
+          "file": "src/modules/topics/registry/topic-routes.ts"
+        },
+        {
+          "name": "TopicRoute",
+          "file": "src/modules/topics/registry/topic-routes.ts"
+        },
+        {
+          "name": "topicRoutes",
+          "file": "src/modules/topics/registry/topic-routes.ts"
+        },
+        {
+          "name": "getTopicRoute",
+          "file": "src/modules/topics/registry/topic-routes.ts"
+        }
+      ]
+    },
+    "topics/wuyue": {
+      "path": "src/modules/topics/wuyue",
+      "exports": [
+        {
+          "name": "WuyueTopicPage",
+          "file": "src/modules/topics/wuyue/WuyueTopicPage.tsx"
+        },
+        {
+          "name": "WuyueHeroFact",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "WuyueTimelineBlock",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "WuyueJudgmentBlock",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "WuyueSourceLink",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "wuyuePageMeta",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "wuyueHeroFacts",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "wuyueTimelineBlocks",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "wuyueJudgmentBlocks",
+          "file": "src/modules/topics/wuyue/content.ts"
+        },
+        {
+          "name": "wuyueSourceLinks",
+          "file": "src/modules/topics/wuyue/content.ts"
+        }
+      ]
+    }
+  }
+}
