@@ -42,7 +42,7 @@ export function PageHero({
             <div className="max-w-4xl space-y-7">
               <span className="hero-kicker">{eyebrow}</span>
               <div className="space-y-5">
-                <p className="ornament-line">宗亲门户</p>
+                <p className="ornament-line">公开导览</p>
                 <h1 className="font-serif-cn text-[3rem] leading-[1.06] text-ink sm:text-[4rem] lg:text-[4.9rem]">
                   {title}
                 </h1>

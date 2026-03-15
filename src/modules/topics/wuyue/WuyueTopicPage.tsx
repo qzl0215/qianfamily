@@ -18,7 +18,7 @@ export function WuyueTopicPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(340px,0.92fr)] lg:items-stretch">
             <div className="surface-card bg-[linear-gradient(145deg,rgba(251,248,242,0.96),rgba(232,221,209,0.68))]">
               <div className="max-w-4xl space-y-7">
-                <span className="hero-kicker">正式专题页</span>
+                <span className="hero-kicker">历史专题</span>
                 <div className="space-y-5">
                   <p className="ornament-line">历史脉络专题</p>
                   <h1 className="font-serif-cn text-[3rem] leading-[1.06] text-ink sm:text-[4rem] lg:text-[4.9rem]">
@@ -26,10 +26,10 @@ export function WuyueTopicPage() {
                   </h1>
                 </div>
                 <p className="hero-deck">
-                  从钱镠崛起到纳土归宋，先把吴越这段历史看清，再理解它为何成为钱氏精神的重要底板。
+                  从钱镠崛起到纳土归宋，先把吴越这段历史看清。
                 </p>
                 <p className="hero-summary">
-                  这一专题不追求百科式铺陈，而是抓住几个关键判断：吴越如何立国，何以重视治水与民生，又为何以纳土归宋成为后世反复讨论的历史转折。
+                  抓住立国、治水、纳土归宋三个节点，就能先理解吴越在钱氏文化中的位置。
                 </p>
                 <div className="flex flex-wrap gap-2.5 text-sm text-accent">
                   <span className="rounded-full border border-accent/10 bg-white/50 px-4 py-2">
@@ -74,7 +74,7 @@ export function WuyueTopicPage() {
                     阅读提示
                   </p>
                   <p className="mt-3 text-sm leading-7 text-muted">
-                    这一页聚焦历史脉络与判断，不展开枝节轶事。先看时间线，再回到“保境安民、治水兴邦、纳土归宋”三项核心理解。
+                    先看时间线，再看三项历史判断。
                   </p>
                 </div>
               </div>
@@ -89,9 +89,9 @@ export function WuyueTopicPage() {
             <div className="grid gap-8 lg:grid-cols-[minmax(260px,0.62fr)_minmax(0,1fr)]">
               <div className="space-y-5 lg:sticky lg:top-28 lg:self-start">
                 <p className="ornament-line">关键节点</p>
-                <h2 className="section-title">四个节点，把吴越放回历史现场</h2>
+                <h2 className="section-title">四个节点，看清吴越</h2>
                 <p className="section-copy">
-                  从晚唐五代的动荡起点，到 978 年的历史转折，再到后世记忆，这四个节点足以把吴越的基本脉络立住。
+                  从晚唐五代到宋以后，这四个节点足以抓住基本脉络。
                 </p>
               </div>
 
@@ -116,9 +116,9 @@ export function WuyueTopicPage() {
           <div className="soft-panel">
             <div className="space-y-4">
               <p className="ornament-line">历史判断</p>
-              <h2 className="section-title">今天为什么还反复谈吴越</h2>
+              <h2 className="section-title">今天为什么还记得吴越</h2>
               <p className="section-copy">
-                这段历史之所以没有沦为朝代知识点，正因为它常被后人提炼为几项持续有效的公共判断。
+                通常会回到保境安民、治水兴邦和审时度势三条判断。
               </p>
             </div>
 
@@ -171,10 +171,10 @@ export function WuyueTopicPage() {
                   下一步
                 </p>
                 <p className="mt-4 font-serif-cn text-[1.35rem] leading-8 text-ink">
-                  历史看清之后，再回到钱氏家训。
+                  历史看清后，再去看钱氏家训。
                 </p>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  吴越回答“这段历史发生了什么”，而家训会继续回答“这些判断最后沉淀成了怎样的家风与做人准则”。
+                  吴越回答历史来路，家训继续回答这些判断后来如何变成家风。
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <ButtonLink href="/">返回首页</ButtonLink>

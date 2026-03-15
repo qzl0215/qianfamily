@@ -16,16 +16,14 @@ export function HomeHeroSection() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(360px,0.98fr)] lg:items-stretch">
           <div className="surface-card surface-card-hero">
             <div className="max-w-4xl space-y-7">
-              <span className="hero-kicker">钱氏宗亲门户首页</span>
+              <span className="hero-kicker">钱氏宗亲</span>
               <div className="space-y-5">
                 <p className="ornament-line">公开浏览，登录办事</p>
                 <h1 className="font-serif-cn text-[3rem] leading-[1.04] text-ink sm:text-[4rem] lg:text-[5rem]">
                   先寻根续谱，再连接宗亲、文化与行动
                 </h1>
               </div>
-              <p className="hero-deck">
-                这不是单纯的文化站，也不是只做工具的办事页，而是把认同、归属、连接与行动合成一条路径的宗亲门户。
-              </p>
+              <p className="hero-deck">把认同、归属、连接与行动连成一条路径。</p>
               <p className="hero-summary">
                 网站总逻辑固定为“文化认同、谱系归属、宗亲连接、参与行动、内容回流”。首页优先给出可执行入口，并用文化主线提供信任基础。
               </p>
@@ -155,13 +153,13 @@ export function HomeHeroSection() {
 
               <div className="rounded-[1.55rem] border border-line/75 bg-white/[0.34] p-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted">
-                  门户判断
+                  首页判断
                 </p>
                 <p className="mt-3 font-serif-cn text-[1.28rem] leading-8 text-ink">
                   先把族人的办事入口立住，再让文化内容成为稳定的信任底板。
                 </p>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  你可以把首页理解为一个公开可浏览、登录后可办理宗亲事务的门户，而不是一个只会讲故事或只会堆功能的页面。
+                  这一页先帮你判断从哪里开始，再把文化内容留成可持续回看的底板。
                 </p>
               </div>
             </div>
