@@ -95,6 +95,7 @@ npm run ai:create-task -- --title "..." --goal "..." --why "..." --modules "port
   - `https://qianfamily.online`
   - `https://www.qianfamily.online` -> 301 到主站
 - 生产部署工作流仍由 `.github/workflows/deploy.yml` 驱动。
+- 版本说明统一存放在 `docs/releases/`，tag 推送后由 `.github/workflows/release.yml` 自动生成或更新 GitHub Release。
 
 初始化一次：
 

@@ -29,6 +29,20 @@ bash scripts/task_commit.sh "中文备注"
 bash scripts/task_pr.sh
 ```
 
+## Release 流程
+1. 在 `docs/releases/` 新建或更新版本说明文件，例如 `docs/releases/v0.1.1.md`。
+2. 完成 `dev -> main` 合并并验证生产构建。
+3. 创建并推送 tag：
+   ```bash
+   git tag -a v0.1.1 -m "v0.1.1"
+   git push origin v0.1.1
+   ```
+4. `.github/workflows/release.yml` 会按同名版本说明创建或更新 GitHub Release。
+
+注意：
+- tag 名与 release note 文件名必须一致。
+- 若只修正文案，可手动触发 `release.yml` 重新同步 GitHub Release。
+
 ## AI 协作工作流
 1. 读规则与架构。
 2. 读当前任务。
