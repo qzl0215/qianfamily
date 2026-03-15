@@ -42,10 +42,12 @@ jobs:
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             tag="${{ inputs.tag }}"
-            git fetch --force origin "refs/tags/${tag}:refs/tags/${tag}"
-            git checkout "${tag}"
+            git fetch --force --tags origin
+            git rev-parse -q --verify "refs/tags/${tag}" >/dev/null
+            allow_version_mismatch="true"
           else
             tag="${GITHUB_REF_NAME}"
+            allow_version_mismatch="false"
           fi
 
           notes_file="docs/releases/${tag}.md"
@@ -65,9 +67,20 @@ jobs:
           echo "tag=${tag}" >> "${GITHUB_OUTPUT}"
           echo "notes_file=${notes_file}" >> "${GITHUB_OUTPUT}"
           echo "title=${title}" >> "${GITHUB_OUTPUT}"
+          echo "allow_version_mismatch=${allow_version_mismatch}" >> "${GITHUB_OUTPUT}"
 
       - name: Verify release consistency
-        run: npm run release:check -- --tag "${{ steps.meta.outputs.tag }}"
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          args=(--tag "${{ steps.meta.outputs.tag }}")
+
+          if [ "${{ steps.meta.outputs.allow_version_mismatch }}" = "true" ]; then
+            args+=(--allow-version-mismatch)
+          fi
+
+          npm run release:check -- "${args[@]}"
 
       - name: Create or update GitHub Release
         env:

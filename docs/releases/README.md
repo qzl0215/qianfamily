@@ -38,4 +38,5 @@
 - 不允许只有 GitHub Release 没有仓库内版本说明
 - 不允许 `package.json` 版本号与 tag 脱节
 - 同一版本的 release note 修改后，可用 `workflow_dispatch` 重新执行 `release.yml` 覆盖 GitHub Release
+- `workflow_dispatch` 用于历史 release note 回放时，可跳过 `package.json` 与历史 tag 的版本一致性检查；tag push 仍保持严格一致性检查
 - 发布说明应只写已发生事实，不写未来猜测

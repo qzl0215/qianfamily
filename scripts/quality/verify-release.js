@@ -17,6 +17,11 @@ function parseArgs(argv) {
     if (token === "--tag") {
       result.tag = argv[index + 1];
       index += 1;
+      continue;
+    }
+
+    if (token === "--allow-version-mismatch") {
+      result.allowVersionMismatch = true;
     }
   }
 
@@ -40,7 +45,7 @@ if (!/^v\d+\.\d+\.\d+$/.test(expectedTag)) {
 
 const expectedVersion = expectedTag.slice(1);
 
-if (packageJson.version !== expectedVersion) {
+if (!args.allowVersionMismatch && packageJson.version !== expectedVersion) {
   fail(
     `package.json version (${packageJson.version}) does not match release tag (${expectedTag})`,
   );
@@ -84,6 +89,7 @@ console.log(
       status: "ok",
       tag: expectedTag,
       version: packageJson.version,
+      allowVersionMismatch: Boolean(args.allowVersionMismatch),
       releaseNotes: `docs/releases/${expectedTag}.md`,
     },
     null,
