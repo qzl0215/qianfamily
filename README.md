@@ -69,6 +69,7 @@ npm install
 npm run dev
 npm run typecheck
 npm run build
+npm run release:check -- --tag v0.1.0
 npm run ai:scan-health
 npm run ai:gen-index
 ```

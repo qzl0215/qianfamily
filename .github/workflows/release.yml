@@ -25,6 +25,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Resolve release metadata
         id: meta
         shell: bash
@@ -33,7 +42,7 @@ jobs:
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             tag="${{ inputs.tag }}"
-            git fetch --tags origin "${tag}"
+            git fetch --force origin "refs/tags/${tag}:refs/tags/${tag}"
             git checkout "${tag}"
           else
             tag="${GITHUB_REF_NAME}"
@@ -56,6 +65,9 @@ jobs:
           echo "tag=${tag}" >> "${GITHUB_OUTPUT}"
           echo "notes_file=${notes_file}" >> "${GITHUB_OUTPUT}"
           echo "title=${title}" >> "${GITHUB_OUTPUT}"
+
+      - name: Verify release consistency
+        run: npm run release:check -- --tag "${{ steps.meta.outputs.tag }}"
 
       - name: Create or update GitHub Release
         env:

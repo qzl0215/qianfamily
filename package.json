@@ -8,6 +8,7 @@
     "typecheck": "tsc --noEmit",
     "check:fast": "npm run typecheck && npm run build",
     "check": "npm run check:fast",
+    "release:check": "node scripts/quality/verify-release.js",
     "ai:scan-health": "tsx scripts/ai/scan-code-health.ts",
     "ai:gen-index": "tsx scripts/ai/generate-module-index.ts",
     "ai:build-context": "tsx scripts/ai/build-context.ts",
